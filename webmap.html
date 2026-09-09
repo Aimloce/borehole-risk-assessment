@@ -10,157 +10,408 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: Arial, sans-serif; }
 
-/* ── LANDING ── */
+/* LANDING */
 #landing {
-  min-height:100vh; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; padding:60px 24px;
-  color:#1a1a2e; background-color:#f5f6f8;
-  background-image:linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px);
-  background-size:36px 36px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    color: #1a1a2e;
+    background-color: #f5f6f8;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 36px 36px;
 }
-.landing-inner { max-width:640px; width:100%; display:flex; flex-direction:column; align-items:center; }
+
+.landing-inner {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo-bar {
-  display:flex; align-items:center; justify-content:center; gap:20px;
-  background:white; border:1px solid #dde2ea; border-radius:14px;
-  padding:14px 32px; margin-bottom:36px; box-shadow:0 1px 6px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+    border: 1px solid #dde2ea;
+    border-radius: 14px;
+    padding: 14px 32px;
+    margin-bottom: 36px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
 }
-.logo-bar img { height:52px; object-fit:contain; }
-.logo-divider { width:1px; height:44px; background:#dde2ea; }
-h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-height:1.25; margin-bottom:10px; }
-.subtitle { font-size:15px; color:#5a6a7a; text-align:center; margin-bottom:36px; }
+
+.logo-bar img {
+    height: 52px;
+    object-fit: contain;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 44px;
+    background: #dde2ea;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 800;
+    text-align: center;
+    color: #0d1f2d;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #5a6a7a;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
 .about-card {
-  width:100%; background:white; border:1px solid #dde2ea; border-radius:10px;
-  padding:28px 32px; margin-bottom:36px; box-shadow:0 1px 6px rgba(0,0,0,0.07);
+    width: 100%;
+    background: white;
+    border: 1px solid #dde2ea;
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-bottom: 36px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
 }
-.about-card h3 { font-size:15px; font-weight:700; color:#0d1f2d; text-align:center; margin-bottom:14px; text-transform:uppercase; letter-spacing:0.5px; }
-.about-card p { font-size:14px; color:#4a5568; line-height:1.75; text-align:center; }
-.select-label { font-size:13px; color:#5a6a7a; margin-bottom:16px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
-.city-grid { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-bottom:40px; }
+
+.about-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0d1f2d;
+    text-align: center;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-card p {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.select-label {
+    font-size: 13px;
+    color: #5a6a7a;
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.city-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
 .city-btn {
-  background:white; border:2px solid #1a3a5c; border-radius:10px;
-  padding:18px 36px; color:#0d1f2d; font-size:16px; font-weight:700;
-  cursor:pointer; transition:all 0.18s ease; min-width:160px; text-align:center;
-  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+    background: white;
+    border: 2px solid #1a3a5c;
+    border-radius: 10px;
+    padding: 18px 36px;
+    color: #0d1f2d;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    min-width: 160px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
-.city-btn:hover { background:#1a3a5c; color:white; transform:translateY(-2px); box-shadow:0 6px 18px rgba(26,58,92,0.25); }
-.city-btn .bh-count { font-size:12px; font-weight:400; color:#888; margin-top:4px; }
-.city-btn:hover .bh-count { color:rgba(255,255,255,0.7); }
-.landing-footer { font-size:12px; color:#aab; text-align:center; }
 
-/* ── MAP PAGE ── */
-#mappage { display:none; flex-direction:column; height:100vh; }
+.city-btn:hover {
+    background: #1a3a5c;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(26,58,92,0.25);
+}
+
+.city-btn .bh-count {
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    margin-top: 4px;
+}
+
+.city-btn:hover .bh-count {
+    color: rgba(255,255,255,0.7);
+}
+
+.landing-footer {
+    font-size: 12px;
+    color: #aab;
+    text-align: center;
+}
+
+/* MAP PAGE */
+#mappage {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+}
+
 #topbar {
-  background:#0d1f2d; color:white; padding:10px 20px;
-  display:flex; align-items:center; justify-content:space-between;
-  box-shadow:0 2px 8px rgba(0,0,0,0.35); flex-shrink:0; z-index:1000; position:relative;
+    background: #0d1f2d;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+    z-index: 1000;
+    position: relative;
 }
-.topbar-logos { display:flex; align-items:center; gap:10px; }
-.topbar-logos img { height:34px; object-fit:contain; background:white; border-radius:4px; padding:2px 5px; }
-.topbar-divider { width:1px; height:28px; background:rgba(255,255,255,0.25); }
-.topbar-center { flex:1; text-align:center; }
-.topbar-center .main-title { font-size:15px; font-weight:700; }
-.topbar-center .sub-title { font-size:11px; color:rgba(255,255,255,0.55); margin-top:2px; }
+
+.topbar-logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-logos img {
+    height: 34px;
+    object-fit: contain;
+    background: white;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+.topbar-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255,255,255,0.25);
+}
+
+.topbar-center {
+    flex: 1;
+    text-align: center;
+}
+
+.topbar-center .main-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.topbar-center .sub-title {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 2px;
+}
+
 #city-badge {
-  background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2);
-  border-radius:20px; padding:5px 16px; font-size:13px; font-weight:600; color:white;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    margin-right: 10px;
 }
+
 #back-btn {
-  background:transparent; border:1px solid rgba(255,255,255,0.3); border-radius:6px;
-  color:white; padding:7px 16px; font-size:13px; cursor:pointer; transition:background 0.15s; margin-left:12px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    color: white;
+    padding: 7px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s;
 }
-#back-btn:hover { background:rgba(255,255,255,0.15); }
-#map { flex:1; }
 
-/* ── LEGEND TOGGLE TAB ── */
-#legend-toggle {
-  position:fixed; right:0; top:50%; transform:translateY(-50%);
-  z-index:1100; background:#0d1f2d; color:white; border:none;
-  border-radius:7px 0 0 7px; width:30px; padding:18px 0;
-  cursor:pointer; display:none; align-items:center; justify-content:center;
-  box-shadow:0 px 0 10px rgba(0,0,0,0.3); transition:background 0.15s;
-  writing-mode:vertical-rl; text-orientation:mixed;
-  font-size:10px; font-weight:700; letter-spacing:1.5px;
+#back-btn:hover {
+    background: rgba(255,255,255,0.15);
 }
-#legend-toggle:hover { background:#1a3a5c; }
 
-/* ── LEGEND SLIDE-IN PANEL ── */
+/* MAP CONTAINER */
+#map-wrap {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* LEGEND PANEL - slides in from the right */
 #legend-panel {
-  position:fixed; top:0; right:-340px; width:320px; height:100vh;
-  z-index:1050; background:white; border-left:1px solid #dde2ea;
-  box-shadow:0 px 0 24px rgba(0,0,0,0.18);
-  transition:right 0.28s cubic-bezier(0.4,0,0.2,1);
-  display:none; flex-direction:column; overflow:hidden;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    z-index: 999;
+    display: none;
+    align-items: flex-start;
 }
-#legend-panel.open { right:0; }
 
-#legend-header {
-  background:#0d1f2d; color:white; padding:14px 18px;
-  display:flex; align-items:center; justify-content:space-between; flex-shrink:0;
+/* The tab/toggle button that sticks out */
+#legend-toggle {
+    background: #0d1f2d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    padding: 14px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 0 6px 6px 0;
+    box-shadow: -2px 2px 8px rgba(0,0,0,0.25);
+    flex-shrink: 0;
+    transition: background 0.15s;
+    user-select: none;
 }
-#legend-header span { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
-#legend-close {
-  background:none; border:none; color:white; font-size:20px;
-  cursor:pointer; line-height:1; padding:2px 5px; border-radius:4px; transition:background 0.15s;
-}
-#legend-close:hover { background:rgba(255,255,255,0.15); }
 
-#legend-body { overflow-y:auto; flex:1; padding:16px 18px; }
+#legend-toggle:hover {
+    background: #1a3a5c;
+}
+
+/* The actual legend body */
+#legend-body {
+    background: white;
+    padding: 16px 18px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 2px 14px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid #dde2ea;
+    border-right: none;
+    width: 240px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    transition: width 0.25s ease, padding 0.25s ease;
+}
+
+#legend-body.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
 .leg-section-title {
-  font-size:11px; font-weight:700; color:#0d1f2d; text-transform:uppercase;
-  letter-spacing:0.6px; margin:16px 0 9px; padding-bottom:5px;
-  border-bottom:2px solid #e8ecf0;
+    font-weight: 700;
+    font-size: 11px;
+    color: #0d1f2d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
-.leg-section-title:first-child { margin-top:0; }
 
-.leg-row { display:flex; align-items:flex-start; margin-bottom:8px; font-size:12.5px; color:#333; gap:10px; }
-.leg-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; margin-top:2px; border:1.5px solid rgba(0,0,0,0.2); }
-.leg-ring-icon { width:20px; height:20px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
-.leg-label { line-height:1.35; }
-.leg-sub { font-size:11px; color:#888; margin-top:2px; }
-
-.leg-zone-box {
-  background:#ffffff; border:1px solid #ffffff; border-radius:7px;
-  padding:10px 13px; margin-bottom:4px;
+.leg-zone-header {
+    background: #f0f4f8;
+    border-left: 3px solid #1a3a5c;
+    padding: 5px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a3a5c;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    white-space: nowrap;
 }
-.leg-zone-box h4 { font-size:12px; font-weight:700; color:#0d1f2d; margin-bottom:4px; }
-.leg-zone-box p { font-size:11px; color:#555; line-height:1.5; }
 
-.leg-divider { border:none; border-top:1px solid #eee; margin:14px 0; }
-.leg-note { font-size:11px; color:#aaa; text-align:center; margin-top:12px; }
-
-.dual-tip {
-  background:#ffffff; border:1px solid #ffffff; border-radius:7px;
-  padding:9px 11px; font-size:12px; color:#5d4000; margin-bottom:12px;
-  display:flex; gap:8px; align-items:flex-start; line-height:1.5;
+.leg-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
 }
-.dual-tip-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+
+.leg-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.leg-hr { margin: 10px 0; border: none; border-top: 1px solid #eee; }
+
+.leg-special {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.leg-ring-swatch {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.leg-note {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 8px;
+    white-space: nowrap;
+}
 </style>
 </head>
 <body>
 
-<!-- ═══════════ LANDING ═══════════ -->
+<!-- LANDING -->
 <div id="landing">
   <div class="landing-inner">
+
     <div class="logo-bar">
       <img src="https://raw.githubusercontent.com/Aimloce/borehole-risk-assessment/main/mapaid_logo.png" alt="MapAID">
       <div class="logo-divider"></div>
       <img src="https://raw.githubusercontent.com/Aimloce/borehole-risk-assessment/main/mzuni_logo.png" alt="Mzuzu University">
     </div>
+
     <h1>Borehole Contamination<br>Risk Assessment</h1>
-    <p class="subtitle">Building Density Triage — Malawi WASH Programme</p>
+    <p class="subtitle">Building Density Triage - Malawi WASH Programme</p>
+
     <div class="about-card">
       <h3>About This Project</h3>
-      <p>This tool supports the identification of boreholes at risk of contamination from nearby sanitation infrastructure across urban Malawi. Using satellite-derived building footprints, each borehole is assessed across two <strong>independent</strong> proximity zones — a 30 m immediate setback zone (direct wellhead hazard) and a 100 m neighbourhood zone (cumulative loading). Each zone is assigned its own risk tier from P1 (Critical) to P5 (Baseline) to triage where ground-truthing and water quality testing are most urgently needed.</p>
+      <p>
+        This tool supports the identification of boreholes at risk of contamination
+        from nearby sanitation infrastructure across urban Malawi. Using satellite-derived
+        building footprints, each borehole is assessed across two independent proximity
+        zones: a 30 m immediate setback zone (wellhead breakthrough risk) and a 100 m
+        neighbourhood zone (cumulative loading risk). Each zone is rated separately from
+        P1 (Critical) to P5 (Baseline). The goal is to triage where ground-truthing
+        and water quality testing are most urgently needed. This dataset will also be
+        used to train a machine or deep learning model to predict water quality risk
+        from satellite data alone.
+      </p>
     </div>
+
     <p class="select-label">Select a city to view its borehole risk map</p>
     <div class="city-grid" id="city-buttons"></div>
-    <p class="landing-footer">MapAID in Collaboration with Mzuzu University — WASH Risk Triage Programme, Malawi</p>
+
+    <p class="landing-footer">MapAID in Collaboration with Mzuzu University - WASH Risk Triage Programme, Malawi</p>
+
   </div>
 </div>
 
-<!-- ═══════════ MAP PAGE ═══════════ -->
+<!-- MAP PAGE -->
 <div id="mappage">
   <div id="topbar">
     <div class="topbar-logos">
@@ -170,145 +421,85 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
     </div>
     <div class="topbar-center">
       <div class="main-title">Borehole Contamination Risk Assessment</div>
-      <div class="sub-title">WASH Risk Triage Programme, Malawi</div>
+      <div class="sub-title">MapAID in Collaboration with Mzuzu University - WASH Programme, Malawi</div>
     </div>
     <div id="city-badge"></div>
-    <button id="back-btn" onclick="showLanding()"> Cities</button>
+    <button id="back-btn" onclick="showLanding()">Back to Cities</button>
   </div>
-  <div id="map"></div>
-</div>
 
-<!-- ═══════════ LEGEND TOGGLE TAB ═══════════ -->
-<button id="legend-toggle" onclick="toggleLegend()">LEGEND</button>
+  <div id="map-wrap">
+    <div id="map"></div>
 
-<!-- ═══════════ LEGEND PANEL ═══════════ -->
-<div id="legend-panel">
-  <div id="legend-header">
-    <span>Risk Classification Guide</span>
-    <button id="legend-close" onclick="toggleLegend()" title="Close">✕</button>
-  </div>
-  <div id="legend-body">
+    <!-- LEGEND PANEL -->
+    <div id="legend-panel">
+      <!-- Slide-out body (shown on left of the tab) -->
+      <div id="legend-body">
+        <div class="leg-section-title">Borehole Risk Tiers</div>
 
-    <div class="dual-tip">
-      <span class="dual-tip-icon"> </span>
-      <span>The 30 m and 100 m zones represent two independent contamination mechanisms. Dot fill = 30 m tier. Outer ring colour = 100 m tier.</span>
-    </div>
+        <div class="leg-zone-header">30 m Inner Zone (Wellhead)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#d7191c;"></div>P1 - Critical</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#fdae61;"></div>P2 - High</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#ffffbf;border:1px solid #ccc;"></div>P3 - Moderate</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#a6d96a;"></div>P4 - Low</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#1a9641;"></div>P5 - Baseline</div>
 
-    <!-- 30 m ZONE -->
-    <div class="leg-zone-box">
-      <h4>Inner Zone - 30 m Setback | Immediate Hazard</h4>
-    <div class="leg-section-title">30 m Tier (dot fill colour)</div>
-    <div class="leg-row">
-      <div class="leg-dot" style="background:#d7191c;"></div>
-      <div class="leg-label"><strong>P1 — Critical</strong><div class="leg-sub">Direct wellhead breakthrough; latrines packed within travel distance</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-dot" style="background:#fdae61;"></div>
-      <div class="leg-label"><strong>P2 — High</strong><div class="leg-sub">High plume proximity under wet-season water table mounding</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-dot" style="background:#ffffbf; border-color:#aaa;"></div>
-      <div class="leg-label"><strong>P3 — Moderate</strong><div class="leg-sub">Manageable risk; standard lateral setbacks maintained</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-dot" style="background:#a6d96a;"></div>
-      <div class="leg-label"><strong>P4 — Low</strong><div class="leg-sub">Isolated discharges contained in shallow saprolite</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-dot" style="background:#1a9641;"></div>
-      <div class="leg-label"><strong>P5 — Baseline</strong><div class="leg-sub">Pristine sanitary zone</div></div>
-    </div>
+        <div class="leg-zone-header">100 m Outer Zone (Loading)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#d7191c;"></div>P1 - Critical</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#fdae61;"></div>P2 - High</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#ffffbf;border:1px solid #ccc;"></div>P3 - Moderate</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#a6d96a;"></div>P4 - Low</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#1a9641;"></div>P5 - Baseline</div>
 
-    <hr class="leg-divider">
+        <hr class="leg-hr">
+        <div class="leg-section-title">Buffer Rings</div>
+        <div class="leg-special">
+          <div class="leg-ring-swatch" style="border:2px solid #d7191c;background:rgba(215,25,28,0.07);"></div>
+          30 m setback zone
+        </div>
+        <div class="leg-special">
+          <div class="leg-ring-swatch" style="border:2px solid #fdae61;background:rgba(253,174,97,0.07);"></div>
+          100 m neighbourhood zone
+        </div>
+        <div class="leg-special">
+          <div class="leg-ring-swatch" style="border:3px solid #FFD700;background:rgba(255,215,0,0.07);"></div>
+          Both zones P1 (dual critical)
+        </div>
+        <div class="leg-note">Click any borehole for details</div>
+      </div>
 
-    <!-- 100 m ZONE -->
-    <div class="leg-zone-box">
-      <h4>○ Outer Zone — 100 m Neighbourhood (~3.14 ha) | Cumulative Loading</h4>
-      <p>Evaluates total assimilative breakdown, plume overlap, and dilution capacity. Outer ring colour reflects this rating.</p>
+      <!-- Toggle tab -->
+      <button id="legend-toggle" onclick="toggleLegend()">LEGEND</button>
     </div>
-    <div class="leg-section-title">100 m Tier (outer ring colour)</div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:16px;height:16px;border-radius:50%;border:3px solid #d7191c;"></div></div>
-      <div class="leg-label"><strong>P1 — Critical</strong><div class="leg-sub">Total assimilative breakdown; effluent overwhelms natural dilution recharge</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:16px;height:16px;border-radius:50%;border:3px solid #fdae61;"></div></div>
-      <div class="leg-label"><strong>P2 — High</strong><div class="leg-sub">Plume overlap; effluent represents significant fraction of recharge</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:16px;height:16px;border-radius:50%;border:3px solid #c8c800;"></div></div>
-      <div class="leg-label"><strong>P3 — Moderate</strong><div class="leg-sub">Semi-contained corridors; effluent partial fraction of recharge</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:16px;height:16px;border-radius:50%;border:3px solid #a6d96a;"></div></div>
-      <div class="leg-label"><strong>P4 — Low</strong><div class="leg-sub">High dilution capacity; recharge dominant</div></div>
-    </div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:16px;height:16px;border-radius:50%;border:3px solid #1a9641;"></div></div>
-      <div class="leg-label"><strong>P5 — Baseline</strong><div class="leg-sub">Ambient groundwater / pristine rural setting</div></div>
-    </div>
-
-    <hr class="leg-divider">
-
-    <!-- SPECIAL INDICATORS -->
-    <div class="leg-section-title">Special Indicators</div>
-    <div class="leg-row">
-      <div class="leg-ring-icon"><div style="width:18px;height:18px;border-radius:50%;border:3px solid #FFD700;box-shadow:0 0 4px rgba(255,215,0,0.6);"></div></div>
-      <div class="leg-label"><strong>Yellow outer ring — Dual P1 Alert</strong><div class="leg-sub">Both 30 m and 100 m zones rated P1 Critical. Highest priority for immediate field verification and water quality testing.</div></div>
-    </div>
-
-    <p class="leg-note">Click any borehole dot for full zone details</p>
   </div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════════
-// TIER DEFINITIONS — independent for 30 m and 100 m zones
-// ═══════════════════════════════════════════════════════
+// ============================================================
+// DATA (full dataset retained from original)
+// ============================================================
+const CITY_DATA = {"Mzuzu": {"boreholes": [{"id": 1, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 2, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 3, "lat": -11.42152, "lon": 33.99288, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 4, "lat": -11.408651, "lon": 34.0027, "count_30m": 2, "count_100m": 12, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 5, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 6, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 7, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 8, "lat": -11.434131, "lon": 34.029277, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 9, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 10, "lat": -11.399483, "lon": 33.971072, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 11, "lat": -11.463787, "lon": 33.998313, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 12, "lat": -11.39606, "lon": 34.03901, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 13, "lat": -11.403619, "lon": 33.975821, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 14, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 15, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 16, "lat": -11.405655, "lon": 33.968742, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 17, "lat": -11.439084, "lon": 34.00953, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 18, "lat": -11.435042, "lon": 34.006285, "count_30m": 12, "count_100m": 62, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 19, "lat": -11.425303, "lon": 33.986349, "count_30m": 7, "count_100m": 48, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 20, "lat": -11.433594, "lon": 34.025879, "count_30m": 13, "count_100m": 111, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 21, "lat": -11.453913, "lon": 34.034482, "count_30m": 6, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 22, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 23, "lat": -11.416031, "lon": 34.010746, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 24, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 25, "lat": -11.396074, "lon": 34.039117, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 26, "lat": -11.422608, "lon": 34.004515, "count_30m": 8, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 27, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 28, "lat": -11.421812, "lon": 33.993416, "count_30m": 5, "count_100m": 27, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 29, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 30, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 31, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 32, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 33, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 34, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 35, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 36, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 37, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 38, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 39, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 40, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 41, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 42, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 43, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 44, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 45, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 46, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 47, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 48, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 49, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 50, "lat": -11.422485, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 51, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 52, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 53, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 54, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 55, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 56, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 57, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 58, "lat": -11.463666, "lon": 33.998189, "count_30m": 4, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 59, "lat": -11.431908, "lon": 33.997192, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 60, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 61, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 62, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 63, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 64, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 65, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 66, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 67, "lat": -11.433888, "lon": 34.00593, "count_30m": 6, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 68, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 69, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 70, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 71, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 72, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 73, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 74, "lat": -11.438324, "lon": 34.009227, "count_30m": 6, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 75, "lat": -11.4824, "lon": 33.965204, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 76, "lat": -11.400511, "lon": 33.974173, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 77, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 78, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 79, "lat": -11.47618, "lon": 34.003038, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 80, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 81, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 82, "lat": -11.433441, "lon": 34.024772, "count_30m": 14, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 83, "lat": -11.436845, "lon": 34.000954, "count_30m": 3, "count_100m": 42, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 84, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 85, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 86, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 87, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 88, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 89, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 90, "lat": -11.441414, "lon": 33.988996, "count_30m": 10, "count_100m": 42, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 91, "lat": -11.431997, "lon": 33.982495, "count_30m": 2, "count_100m": 17, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 92, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 93, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 94, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 95, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 96, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 97, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 98, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 99, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 100, "lat": -11.422116, "lon": 33.993172, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 101, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 102, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 103, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 104, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 105, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 106, "lat": -11.435143, "lon": 34.008047, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 107, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 108, "lat": -11.422097, "lon": 33.993969, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 109, "lat": -11.416174, "lon": 34.010679, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 110, "lat": -11.422485, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 111, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 112, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 113, "lat": -11.422389, "lon": 33.993484, "count_30m": 5, "count_100m": 20, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 114, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 115, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 116, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 117, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 118, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 119, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 120, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 121, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 122, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 123, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 124, "lat": -11.425402, "lon": 33.986469, "count_30m": 6, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 125, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 126, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 127, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 128, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 129, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 130, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 131, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 132, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 133, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 134, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 135, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 136, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 137, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 138, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 139, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 140, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 141, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 142, "lat": -11.433509, "lon": 34.003799, "count_30m": 6, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 143, "lat": -11.385857, "lon": 33.996416, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 144, "lat": -11.45425, "lon": 34.001692, "count_30m": 3, "count_100m": 9, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 145, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 146, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 147, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 148, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 149, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 150, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 151, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 152, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 153, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 154, "lat": -11.433487, "lon": 34.003801, "count_30m": 5, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 155, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 156, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 157, "lat": -11.477793, "lon": 33.980033, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 158, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 159, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 160, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 161, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 162, "lat": -11.438332, "lon": 34.009316, "count_30m": 6, "count_100m": 30, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 163, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 164, "lat": -11.434733, "lon": 33.971399, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 165, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 166, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 167, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 168, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 169, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 170, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 171, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 172, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 173, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 174, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 175, "lat": -11.434828, "lon": 34.00632, "count_30m": 11, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 176, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 177, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 178, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 179, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 180, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 181, "lat": -11.43483, "lon": 34.038798, "count_30m": 7, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 182, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 183, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 184, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 185, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 186, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 187, "lat": -11.434131, "lon": 34.029277, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 188, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 189, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 190, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 191, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 192, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 193, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 194, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 195, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 196, "lat": -11.44106, "lon": 34.005805, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 197, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 198, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 199, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 200, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}], "center_lat": -11.436417, "center_lon": 34.002533}, "Blantyre": {"boreholes": [{"id": 1, "lat": -15.74755, "lon": 35.0148, "count_30m": 15, "count_100m": 184, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 2, "lat": -15.763513, "lon": 35.03829, "count_30m": 16, "count_100m": 77, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 3, "lat": -15.751005, "lon": 35.006461, "count_30m": 12, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 4, "lat": -15.875875, "lon": 35.05998, "count_30m": 3, "count_100m": 69, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 5, "lat": -15.747088, "lon": 35.003908, "count_30m": 8, "count_100m": 83, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 6, "lat": -15.745313, "lon": 35.0081, "count_30m": 13, "count_100m": 170, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 7, "lat": -15.769347, "lon": 35.031481, "count_30m": 29, "count_100m": 318, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 8, "lat": -15.769827, "lon": 35.033576, "count_30m": 21, "count_100m": 441, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 9, "lat": -15.771272, "lon": 35.030384, "count_30m": 23, "count_100m": 433, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 10, "lat": -15.76946, "lon": 35.031435, "count_30m": 28, "count_100m": 311, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 11, "lat": -15.767804, "lon": 35.032105, "count_30m": 36, "count_100m": 445, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 12, "lat": -15.739195, "lon": 35.000237, "count_30m": 12, "count_100m": 148, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 13, "lat": -15.769457, "lon": 35.031436, "count_30m": 28, "count_100m": 311, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 14, "lat": -15.771218, "lon": 35.029246, "count_30m": 25, "count_100m": 321, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 15, "lat": -15.772029, "lon": 35.024532, "count_30m": 3, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 16, "lat": -15.734817, "lon": 34.998327, "count_30m": 16, "count_100m": 172, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 17, "lat": -15.735557, "lon": 34.999231, "count_30m": 16, "count_100m": 177, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 18, "lat": -15.76648, "lon": 35.032449, "count_30m": 34, "count_100m": 494, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 19, "lat": -15.767804, "lon": 35.032105, "count_30m": 36, "count_100m": 445, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 20, "lat": -15.764618, "lon": 35.032733, "count_30m": 35, "count_100m": 470, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}], "center_lat": -15.782925, "center_lon": 35.029884}, "Lilongwe": {"boreholes": [{"id": 1, "lat": -13.909312, "lon": 33.763439, "count_30m": 16, "count_100m": 99, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 2, "lat": -13.975272, "lon": 33.772548, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 3, "lat": -13.945899, "lon": 33.784096, "count_30m": 5, "count_100m": 6, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 4, "lat": -13.96074, "lon": 33.746952, "count_30m": 6, "count_100m": 38, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 5, "lat": -13.960481, "lon": 33.799476, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 6, "lat": -13.862159, "lon": 33.748913, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 7, "lat": -13.908234, "lon": 33.785087, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 8, "lat": -13.958929, "lon": 33.77182, "count_30m": 8, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 9, "lat": -13.97683, "lon": 33.757655, "count_30m": 10, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 10, "lat": -13.976899, "lon": 33.757496, "count_30m": 9, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 11, "lat": -13.976977, "lon": 33.757529, "count_30m": 10, "count_100m": 35, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 12, "lat": -13.976907, "lon": 33.757505, "count_30m": 9, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 13, "lat": -13.977882, "lon": 33.747768, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 14, "lat": -14.025302, "lon": 33.805485, "count_30m": 19, "count_100m": 121, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 15, "lat": -13.960632, "lon": 33.74742, "count_30m": 10, "count_100m": 37, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 16, "lat": -13.960411, "lon": 33.74735, "count_30m": 11, "count_100m": 40, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 17, "lat": -13.999539, "lon": 33.812745, "count_30m": 12, "count_100m": 107, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 18, "lat": -14.00697, "lon": 33.667377, "count_30m": 4, "count_100m": 11, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 19, "lat": -13.976691, "lon": 33.757879, "count_30m": 10, "count_100m": 31, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 20, "lat": -14.002243, "lon": 33.801877, "count_30m": 18, "count_100m": 121, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}], "center_lat": -13.961821, "center_lon": 33.746931}};
+
+// ============================================================
+// TIER LOOKUP
+// ============================================================
 const TIER = {
-  1: { color:"#d7191c", label:"P1 — Critical" },
-  2: { color:"#fdae61", label:"P2 — High"     },
-  3: { color:"#ffffbf", label:"P3 — Moderate" },
-  4: { color:"#a6d96a", label:"P4 — Low"      },
-  5: { color:"#1a9641", label:"P5 — Baseline" },
+  1: { color: "#d7191c", label: "P1 - Critical" },
+  2: { color: "#fdae61", label: "P2 - High" },
+  3: { color: "#ffffbf", label: "P3 - Moderate" },
+  4: { color: "#a6d96a", label: "P4 - Low" },
+  5: { color: "#1a9641", label: "P5 - Baseline" },
 };
 
-// Readable descriptions per tier per zone
-const DESC_30 = {
-  1:"Direct wellhead breakthrough; latrines packed within travel distance",
-  2:"High plume proximity under wet-season water table mounding",
-  3:"Manageable risk; standard lateral setbacks maintained",
-  4:"Isolated discharges contained in shallow saprolite",
-  5:"Pristine sanitary zone",
-};
-const DESC_100 = {
-  1:"Total assimilative breakdown; effluent overwhelms natural dilution",
-  2:"Plume overlap; effluent significant fraction of recharge",
-  3:"Semi-contained corridors; effluent partial fraction of recharge",
-  4:"High dilution capacity; recharge dominant",
-  5:"Ambient groundwater / pristine rural setting",
-};
-
-// ═══════════════════════════════════════════════════════
-// CITY DATA
-// ═══════════════════════════════════════════════════════
-const CITY_DATA = {"Mzuzu": {"boreholes": [{"id": 1, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 2, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 3, "lat": -11.42152, "lon": 33.99288, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 4, "lat": -11.408651, "lon": 34.0027, "count_30m": 2, "count_100m": 12, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 5, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 6, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 7, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 8, "lat": -11.434131, "lon": 34.029277, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 9, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 10, "lat": -11.399483, "lon": 33.971072, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 11, "lat": -11.463787, "lon": 33.998313, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 12, "lat": -11.39606, "lon": 34.03901, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 13, "lat": -11.403619, "lon": 33.975821, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 14, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 15, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 16, "lat": -11.405655, "lon": 33.968742, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 17, "lat": -11.439084, "lon": 34.00953, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 18, "lat": -11.435042, "lon": 34.006285, "count_30m": 12, "count_100m": 62, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 19, "lat": -11.425303, "lon": 33.986349, "count_30m": 7, "count_100m": 48, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 20, "lat": -11.433594, "lon": 34.025879, "count_30m": 13, "count_100m": 111, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 21, "lat": -11.453913, "lon": 34.034482, "count_30m": 6, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 22, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 23, "lat": -11.416031, "lon": 34.010746, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 24, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 25, "lat": -11.396074, "lon": 34.039117, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 26, "lat": -11.422608, "lon": 34.004515, "count_30m": 8, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 27, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 28, "lat": -11.421812, "lon": 33.993416, "count_30m": 5, "count_100m": 27, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 29, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 30, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 31, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 32, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 33, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 34, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 35, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 36, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 37, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 38, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 39, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 40, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 41, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 42, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 43, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 44, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 45, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 46, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 47, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 48, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 49, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 50, "lat": -11.422485, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 51, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 52, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 53, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 54, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 55, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 56, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 57, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 58, "lat": -11.463666, "lon": 33.998189, "count_30m": 4, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 59, "lat": -11.431908, "lon": 33.997192, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 60, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 61, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 62, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 63, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 64, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 65, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 66, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 67, "lat": -11.433888, "lon": 34.00593, "count_30m": 6, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 68, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 69, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 70, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 71, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 72, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 73, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 74, "lat": -11.438324, "lon": 34.009227, "count_30m": 6, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 75, "lat": -11.4824, "lon": 33.965204, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 76, "lat": -11.400511, "lon": 33.974173, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 77, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 78, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 79, "lat": -11.47618, "lon": 34.003038, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 80, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 81, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 82, "lat": -11.433441, "lon": 34.024772, "count_30m": 14, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 83, "lat": -11.436845, "lon": 34.000954, "count_30m": 3, "count_100m": 42, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 84, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 85, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 86, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 87, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 88, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 89, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 90, "lat": -11.441414, "lon": 33.988996, "count_30m": 10, "count_100m": 42, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 91, "lat": -11.431997, "lon": 33.982495, "count_30m": 2, "count_100m": 17, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 92, "lat": -11.457432, "lon": 34.027761, "count_30m": 3, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 93, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 94, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 95, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 96, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 97, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 98, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 99, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 100, "lat": -11.422116, "lon": 33.993172, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 101, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 102, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 103, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 104, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 105, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 106, "lat": -11.435143, "lon": 34.008047, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 107, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 108, "lat": -11.422097, "lon": 33.993969, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 109, "lat": -11.416174, "lon": 34.010679, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 110, "lat": -11.422485, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 111, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 112, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 113, "lat": -11.422389, "lon": 33.993484, "count_30m": 5, "count_100m": 20, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 114, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 115, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 116, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 117, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 118, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 119, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 120, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 121, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 122, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 123, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 124, "lat": -11.425402, "lon": 33.986469, "count_30m": 6, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 125, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 126, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 127, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 128, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 129, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 130, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 131, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 132, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 133, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 134, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 135, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 136, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 137, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 138, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 139, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 140, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 141, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 142, "lat": -11.433509, "lon": 34.003799, "count_30m": 6, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 143, "lat": -11.385857, "lon": 33.996416, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 144, "lat": -11.45425, "lon": 34.001692, "count_30m": 3, "count_100m": 9, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 145, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 146, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 147, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 148, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 149, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 150, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 151, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 152, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 153, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 154, "lat": -11.433487, "lon": 34.003801, "count_30m": 5, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 155, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 156, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 157, "lat": -11.477793, "lon": 33.980033, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 158, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 159, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 160, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 161, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 162, "lat": -11.438332, "lon": 34.009316, "count_30m": 6, "count_100m": 30, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 163, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 164, "lat": -11.434733, "lon": 33.971399, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 165, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 166, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 167, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 168, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 169, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 170, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 171, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 172, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 173, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 174, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 175, "lat": -11.434828, "lon": 34.00632, "count_30m": 11, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 176, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 177, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 178, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 179, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 180, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 181, "lat": -11.43483, "lon": 34.038798, "count_30m": 7, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 182, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 183, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 184, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 185, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 186, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 187, "lat": -11.434131, "lon": 34.029277, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 188, "lat": -11.440673, "lon": 33.998527, "count_30m": 12, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 189, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 190, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 191, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 192, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 193, "lat": -11.397553, "lon": 34.004773, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 194, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 195, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 196, "lat": -11.44106, "lon": 34.005805, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 197, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 198, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 199, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 200, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 201, "lat": -11.434733, "lon": 33.971399, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 202, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 203, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 204, "lat": -11.47618, "lon": 34.003038, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 205, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 206, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 207, "lat": -11.442422, "lon": 33.995898, "count_30m": 16, "count_100m": 108, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 208, "lat": -11.415093, "lon": 33.994777, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 209, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 210, "lat": -11.477793, "lon": 33.980033, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 211, "lat": -11.416589, "lon": 33.990747, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 212, "lat": -11.405655, "lon": 33.968742, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 213, "lat": -11.416603, "lon": 33.990531, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 214, "lat": -11.428424, "lon": 34.023741, "count_30m": 11, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 215, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 216, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 217, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 218, "lat": -11.44106, "lon": 34.005805, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 219, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 220, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 221, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 222, "lat": -11.436845, "lon": 34.000954, "count_30m": 3, "count_100m": 42, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 223, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 224, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 225, "lat": -11.434828, "lon": 34.00632, "count_30m": 11, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 226, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 227, "lat": -11.475683, "lon": 33.99625, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 228, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 229, "lat": -11.419133, "lon": 33.994128, "count_30m": 6, "count_100m": 10, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 230, "lat": -11.43483, "lon": 34.038798, "count_30m": 7, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 231, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 232, "lat": -11.427705, "lon": 34.013408, "count_30m": 6, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 233, "lat": -11.450777, "lon": 34.004363, "count_30m": 15, "count_100m": 142, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 234, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 235, "lat": -11.47618, "lon": 34.003038, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 236, "lat": -11.45425, "lon": 34.001692, "count_30m": 3, "count_100m": 9, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 237, "lat": -11.484422, "lon": 33.977193, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 238, "lat": -11.405655, "lon": 33.968742, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 239, "lat": -11.41966, "lon": 33.999378, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 240, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 241, "lat": -11.426366, "lon": 34.014917, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 242, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 243, "lat": -11.436845, "lon": 34.000954, "count_30m": 3, "count_100m": 42, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 244, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 245, "lat": -11.401536, "lon": 33.971607, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 246, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 247, "lat": -11.434828, "lon": 34.00632, "count_30m": 11, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 248, "lat": -11.433888, "lon": 34.00593, "count_30m": 6, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 249, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 250, "lat": -11.419133, "lon": 33.994128, "count_30m": 6, "count_100m": 10, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 251, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 252, "lat": -11.43483, "lon": 34.038798, "count_30m": 7, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 253, "lat": -11.4543, "lon": 33.997012, "count_30m": 17, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 254, "lat": -11.442997, "lon": 33.998402, "count_30m": 8, "count_100m": 61, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 255, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 256, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 257, "lat": -11.442422, "lon": 33.995898, "count_30m": 16, "count_100m": 108, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 258, "lat": -11.441748, "lon": 33.997528, "count_30m": 11, "count_100m": 88, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 259, "lat": -11.416091, "lon": 34.010754, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 260, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 261, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 262, "lat": -11.393057, "lon": 33.993338, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 263, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 264, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 265, "lat": -11.416589, "lon": 33.990747, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 266, "lat": -11.477793, "lon": 33.980033, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 267, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 268, "lat": -11.434828, "lon": 34.00632, "count_30m": 11, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 269, "lat": -11.403513, "lon": 33.974404, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 270, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 271, "lat": -11.457597, "lon": 34.002112, "count_30m": 8, "count_100m": 69, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 272, "lat": -11.43416, "lon": 34.003915, "count_30m": 9, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 273, "lat": -11.475405, "lon": 33.982992, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 274, "lat": -11.42004, "lon": 34.001005, "count_30m": 6, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 275, "lat": -11.450655, "lon": 34.02027, "count_30m": 6, "count_100m": 39, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 276, "lat": -11.433888, "lon": 34.00593, "count_30m": 6, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 277, "lat": -11.444005, "lon": 34.021698, "count_30m": 13, "count_100m": 97, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 278, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 279, "lat": -11.43483, "lon": 34.038798, "count_30m": 7, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 280, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 281, "lat": -11.419133, "lon": 33.994128, "count_30m": 6, "count_100m": 10, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 282, "lat": -11.435143, "lon": 34.008047, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 283, "lat": -11.392602, "lon": 33.980667, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 284, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 285, "lat": -11.456391, "lon": 34.017586, "count_30m": 6, "count_100m": 44, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 286, "lat": -11.431997, "lon": 33.982495, "count_30m": 2, "count_100m": 17, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 287, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 288, "lat": -11.41966, "lon": 33.999378, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 289, "lat": -11.436845, "lon": 34.000954, "count_30m": 3, "count_100m": 42, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 290, "lat": -11.424629, "lon": 33.997423, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 291, "lat": -11.426993, "lon": 34.015662, "count_30m": 5, "count_100m": 19, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 292, "lat": -11.438705, "lon": 34.007446, "count_30m": 19, "count_100m": 76, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 293, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 294, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 295, "lat": -11.457597, "lon": 34.002112, "count_30m": 8, "count_100m": 69, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 296, "lat": -11.427735, "lon": 34.01447, "count_30m": 3, "count_100m": 32, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 297, "lat": -11.416589, "lon": 33.990747, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 298, "lat": -11.428823, "lon": 34.022223, "count_30m": 14, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 299, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 300, "lat": -11.434733, "lon": 33.971399, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 301, "lat": -11.44106, "lon": 34.005805, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 302, "lat": -11.461925, "lon": 33.979932, "count_30m": 2, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 303, "lat": -11.426283, "lon": 34.016403, "count_30m": 5, "count_100m": 17, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 304, "lat": -11.427663, "lon": 34.013382, "count_30m": 5, "count_100m": 65, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 305, "lat": -11.435143, "lon": 34.008047, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 306, "lat": -11.41966, "lon": 33.999378, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 307, "lat": -11.418545, "lon": 33.996237, "count_30m": 2, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 308, "lat": -11.396737, "lon": 34.004387, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 309, "lat": -11.435143, "lon": 34.008047, "count_30m": 5, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 310, "lat": -11.444214, "lon": 34.049061, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 311, "lat": -11.434733, "lon": 33.971399, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 312, "lat": -11.42263, "lon": 34.004574, "count_30m": 8, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 313, "lat": -11.423023, "lon": 34.003878, "count_30m": 9, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 314, "lat": -11.442422, "lon": 33.995898, "count_30m": 16, "count_100m": 108, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 315, "lat": -11.422317, "lon": 33.993416, "count_30m": 5, "count_100m": 23, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 316, "lat": -11.47618, "lon": 34.003038, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 317, "lat": -11.445958, "lon": 34.011408, "count_30m": 12, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 318, "lat": -11.425272, "lon": 34.009342, "count_30m": 4, "count_100m": 12, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 319, "lat": -11.396554, "lon": 34.005097, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 320, "lat": -11.422485, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 321, "lat": -11.43738, "lon": 34.00405, "count_30m": 4, "count_100m": 15, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 322, "lat": -11.43619, "lon": 34.003908, "count_30m": 6, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 323, "lat": -11.453938, "lon": 33.992632, "count_30m": 8, "count_100m": 56, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 324, "lat": -11.442422, "lon": 33.995898, "count_30m": 16, "count_100m": 108, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 325, "lat": -11.441068, "lon": 33.974685, "count_30m": 2, "count_100m": 13, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 326, "lat": -11.41966, "lon": 33.999378, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 327, "lat": -11.477793, "lon": 33.980033, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 328, "lat": -11.405655, "lon": 33.968742, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 329, "lat": -11.416589, "lon": 33.990747, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 330, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 331, "lat": -11.434707, "lon": 34.006007, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 332, "lat": -11.435, "lon": 34.006237, "count_30m": 11, "count_100m": 62, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 333, "lat": -11.438324, "lon": 34.009227, "count_30m": 6, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 334, "lat": -11.479712, "lon": 34.001628, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 335, "lat": -11.419133, "lon": 33.994128, "count_30m": 6, "count_100m": 10, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 336, "lat": -11.395001, "lon": 34.010981, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 337, "lat": -11.455798, "lon": 33.9766, "count_30m": 5, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 338, "lat": -11.45425, "lon": 34.001692, "count_30m": 3, "count_100m": 9, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 339, "lat": -11.403545, "lon": 33.975976, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 340, "lat": -11.435605, "lon": 34.006482, "count_30m": 13, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 341, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 342, "lat": -11.464662, "lon": 34.011, "count_30m": 2, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 343, "lat": -11.457597, "lon": 34.002112, "count_30m": 8, "count_100m": 69, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 344, "lat": -11.457061, "lon": 34.049721, "count_30m": 4, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 345, "lat": -11.448864, "lon": 33.993337, "count_30m": 17, "count_100m": 131, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 346, "lat": -11.422401, "lon": 33.993416, "count_30m": 5, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 347, "lat": -11.434858, "lon": 34.006447, "count_30m": 12, "count_100m": 57, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 348, "lat": -11.463872, "lon": 33.998441, "count_30m": 3, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 349, "lat": -11.463875, "lon": 33.998353, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 350, "lat": -11.46449, "lon": 33.998679, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 351, "lat": -11.463882, "lon": 33.998444, "count_30m": 3, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 352, "lat": -11.463879, "lon": 33.998362, "count_30m": 3, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 353, "lat": -11.453737, "lon": 33.98721, "count_30m": 10, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 354, "lat": -11.463882, "lon": 33.998345, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 355, "lat": -11.463592, "lon": 33.999285, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 356, "lat": -11.463561, "lon": 34.001361, "count_30m": 2, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 357, "lat": -11.464049, "lon": 33.998214, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 358, "lat": -11.39938, "lon": 33.971129, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 359, "lat": -11.433888, "lon": 34.00593, "count_30m": 6, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 360, "lat": -11.4446, "lon": 34.011302, "count_30m": 7, "count_100m": 70, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 361, "lat": -11.457597, "lon": 34.002112, "count_30m": 8, "count_100m": 69, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 362, "lat": -11.45425, "lon": 34.001692, "count_30m": 3, "count_100m": 9, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 363, "lat": -11.483555, "lon": 33.979417, "count_30m": 4, "count_100m": 20, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 364, "lat": -11.44106, "lon": 34.005805, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 365, "lat": -11.405758, "lon": 33.969984, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 366, "lat": -11.430251, "lon": 34.012205, "count_30m": 18, "count_100m": 169, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 367, "lat": -11.474023, "lon": 34.025147, "count_30m": 2, "count_100m": 46, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 368, "lat": -11.481917, "lon": 33.98868, "count_30m": 2, "count_100m": 2, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}], "center_lat": -11.436417, "center_lon": 34.002533}, "Blantyre": {"boreholes": [{"id": 1, "lat": -15.74755, "lon": 35.0148, "count_30m": 15, "count_100m": 184, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 2, "lat": -15.763513, "lon": 35.03829, "count_30m": 16, "count_100m": 77, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 3, "lat": -15.751005, "lon": 35.006461, "count_30m": 12, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 4, "lat": -15.875875, "lon": 35.05998, "count_30m": 3, "count_100m": 69, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 5, "lat": -15.747088, "lon": 35.003908, "count_30m": 8, "count_100m": 83, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 6, "lat": -15.745313, "lon": 35.0081, "count_30m": 13, "count_100m": 170, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 7, "lat": -15.769347, "lon": 35.031481, "count_30m": 29, "count_100m": 318, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 8, "lat": -15.769827, "lon": 35.033576, "count_30m": 21, "count_100m": 441, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 9, "lat": -15.771272, "lon": 35.030384, "count_30m": 23, "count_100m": 433, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 10, "lat": -15.76946, "lon": 35.031435, "count_30m": 28, "count_100m": 311, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 11, "lat": -15.767804, "lon": 35.032105, "count_30m": 36, "count_100m": 445, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 12, "lat": -15.739195, "lon": 35.000237, "count_30m": 12, "count_100m": 148, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 13, "lat": -15.769457, "lon": 35.031436, "count_30m": 28, "count_100m": 311, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 14, "lat": -15.771218, "lon": 35.029246, "count_30m": 25, "count_100m": 321, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 15, "lat": -15.772029, "lon": 35.024532, "count_30m": 3, "count_100m": 26, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 16, "lat": -15.734817, "lon": 34.998327, "count_30m": 16, "count_100m": 172, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 17, "lat": -15.735557, "lon": 34.999231, "count_30m": 16, "count_100m": 177, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 18, "lat": -15.76648, "lon": 35.032449, "count_30m": 34, "count_100m": 494, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 19, "lat": -15.767804, "lon": 35.032105, "count_30m": 36, "count_100m": 445, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 20, "lat": -15.764618, "lon": 35.032733, "count_30m": 35, "count_100m": 470, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 21, "lat": -15.764136, "lon": 35.032748, "count_30m": 27, "count_100m": 425, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 22, "lat": -15.737146, "lon": 35.000405, "count_30m": 12, "count_100m": 127, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 23, "lat": -15.736918, "lon": 35.001513, "count_30m": 15, "count_100m": 133, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 24, "lat": -15.737739, "lon": 35.007244, "count_30m": 13, "count_100m": 195, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 25, "lat": -15.736949, "lon": 35.010525, "count_30m": 18, "count_100m": 139, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 26, "lat": -15.730437, "lon": 35.02241, "count_30m": 3, "count_100m": 31, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 27, "lat": -15.734481, "lon": 35.009611, "count_30m": 9, "count_100m": 115, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 28, "lat": -15.73281, "lon": 35.010834, "count_30m": 15, "count_100m": 115, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 29, "lat": -15.785993, "lon": 35.008493, "count_30m": 8, "count_100m": 57, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 30, "lat": -15.734537, "lon": 35.013574, "count_30m": 10, "count_100m": 159, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 31, "lat": -15.735819, "lon": 35.01944, "count_30m": 8, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 32, "lat": -15.739763, "lon": 35.01775, "count_30m": 12, "count_100m": 158, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 33, "lat": -15.739735, "lon": 35.017824, "count_30m": 13, "count_100m": 158, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 34, "lat": -15.740357, "lon": 35.018999, "count_30m": 12, "count_100m": 198, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 35, "lat": -15.749217, "lon": 35.013468, "count_30m": 19, "count_100m": 114, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 36, "lat": -15.790624, "lon": 35.070208, "count_30m": 5, "count_100m": 97, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 37, "lat": -15.785359, "lon": 35.014946, "count_30m": 5, "count_100m": 35, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 38, "lat": -15.8095, "lon": 34.992168, "count_30m": 14, "count_100m": 128, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 39, "lat": -15.785225, "lon": 35.006676, "count_30m": 6, "count_100m": 43, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 40, "lat": -15.752105, "lon": 35.011106, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 41, "lat": -15.749238, "lon": 35.009386, "count_30m": 13, "count_100m": 89, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 42, "lat": -15.749293, "lon": 35.00967, "count_30m": 15, "count_100m": 94, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 43, "lat": -15.749331, "lon": 35.00904, "count_30m": 5, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 44, "lat": -15.749331, "lon": 35.00904, "count_30m": 5, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 45, "lat": -15.748987, "lon": 35.009577, "count_30m": 19, "count_100m": 95, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 46, "lat": -15.749331, "lon": 35.00904, "count_30m": 5, "count_100m": 90, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 47, "lat": -15.749187, "lon": 35.009459, "count_30m": 16, "count_100m": 90, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 48, "lat": -15.749221, "lon": 35.009451, "count_30m": 14, "count_100m": 89, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 49, "lat": -15.752105, "lon": 35.011106, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 50, "lat": -15.824774, "lon": 34.978445, "count_30m": 7, "count_100m": 51, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 51, "lat": -15.827927, "lon": 34.984592, "count_30m": 8, "count_100m": 76, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 52, "lat": -15.737574, "lon": 35.016353, "count_30m": 5, "count_100m": 75, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 53, "lat": -15.729237, "lon": 35.016046, "count_30m": 4, "count_100m": 41, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 54, "lat": -15.727358, "lon": 35.014501, "count_30m": 4, "count_100m": 56, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 55, "lat": -15.764845, "lon": 35.00319, "count_30m": 24, "count_100m": 275, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 56, "lat": -15.782635, "lon": 35.023748, "count_30m": 8, "count_100m": 50, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 57, "lat": -15.782553, "lon": 35.023866, "count_30m": 10, "count_100m": 49, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 58, "lat": -15.77653, "lon": 34.979362, "count_30m": 8, "count_100m": 97, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 59, "lat": -15.838338, "lon": 35.049813, "count_30m": 18, "count_100m": 180, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 60, "lat": -15.840023, "lon": 35.047507, "count_30m": 10, "count_100m": 145, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 61, "lat": -15.766398, "lon": 35.031012, "count_30m": 34, "count_100m": 326, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 62, "lat": -15.771923, "lon": 35.030785, "count_30m": 46, "count_100m": 438, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 63, "lat": -15.725933, "lon": 35.015295, "count_30m": 5, "count_100m": 71, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 64, "lat": -15.840847, "lon": 35.078868, "count_30m": 18, "count_100m": 319, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 65, "lat": -15.84853, "lon": 35.077907, "count_30m": 10, "count_100m": 153, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 66, "lat": -15.729997, "lon": 35.021758, "count_30m": 4, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 67, "lat": -15.848277, "lon": 35.075887, "count_30m": 9, "count_100m": 163, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 68, "lat": -15.763922, "lon": 35.00382, "count_30m": 15, "count_100m": 290, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 69, "lat": -15.769944, "lon": 35.029547, "count_30m": 36, "count_100m": 323, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 70, "lat": -15.790796, "lon": 35.069294, "count_30m": 10, "count_100m": 83, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 71, "lat": -15.783013, "lon": 35.069812, "count_30m": 11, "count_100m": 168, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 72, "lat": -15.763802, "lon": 35.003838, "count_30m": 13, "count_100m": 295, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 73, "lat": -15.786232, "lon": 35.068623, "count_30m": 8, "count_100m": 170, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 74, "lat": -15.73021, "lon": 35.022695, "count_30m": 3, "count_100m": 11, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 75, "lat": -15.78338, "lon": 35.071093, "count_30m": 17, "count_100m": 200, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 76, "lat": -15.78237, "lon": 35.073242, "count_30m": 15, "count_100m": 157, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 77, "lat": -15.78919, "lon": 35.068706, "count_30m": 21, "count_100m": 300, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 78, "lat": -15.788955, "lon": 35.067801, "count_30m": 45, "count_100m": 362, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 79, "lat": -15.787405, "lon": 35.067995, "count_30m": 18, "count_100m": 239, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 80, "lat": -15.878086, "lon": 35.06082, "count_30m": 21, "count_100m": 246, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 81, "lat": -15.72865, "lon": 35.027508, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 82, "lat": -15.729817, "lon": 35.03053, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 83, "lat": -15.84184, "lon": 35.081212, "count_30m": 10, "count_100m": 122, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 84, "lat": -15.72897, "lon": 35.031588, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 85, "lat": -15.72897, "lon": 35.031587, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 86, "lat": -15.761548, "lon": 35.003465, "count_30m": 17, "count_100m": 211, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 87, "lat": -15.844897, "lon": 35.049131, "count_30m": 14, "count_100m": 310, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 88, "lat": -15.842896, "lon": 35.07918, "count_30m": 14, "count_100m": 205, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 89, "lat": -15.726567, "lon": 35.031198, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 90, "lat": -15.76478, "lon": 35.029767, "count_30m": 14, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 91, "lat": -15.782535, "lon": 35.023672, "count_30m": 9, "count_100m": 53, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 92, "lat": -15.781662, "lon": 35.023778, "count_30m": 8, "count_100m": 55, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 93, "lat": -15.78249, "lon": 35.023714, "count_30m": 9, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 94, "lat": -15.782589, "lon": 35.02365, "count_30m": 8, "count_100m": 54, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 95, "lat": -15.782577, "lon": 35.023692, "count_30m": 9, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 96, "lat": -15.782062, "lon": 35.024094, "count_30m": 16, "count_100m": 55, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 97, "lat": -15.782489, "lon": 35.023714, "count_30m": 9, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 98, "lat": -15.782518, "lon": 35.023779, "count_30m": 9, "count_100m": 51, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 99, "lat": -15.783313, "lon": 35.025358, "count_30m": 3, "count_100m": 44, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 100, "lat": -15.84419, "lon": 35.078207, "count_30m": 13, "count_100m": 195, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 101, "lat": -15.844212, "lon": 35.077098, "count_30m": 20, "count_100m": 244, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 102, "lat": -15.728057, "lon": 35.033287, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 103, "lat": -15.845101, "lon": 35.04675, "count_30m": 26, "count_100m": 196, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 104, "lat": -15.782417, "lon": 35.023635, "count_30m": 9, "count_100m": 57, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 105, "lat": -15.782249, "lon": 35.023551, "count_30m": 9, "count_100m": 62, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 106, "lat": -15.778728, "lon": 34.97822, "count_30m": 9, "count_100m": 75, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 107, "lat": -15.733952, "lon": 35.015583, "count_30m": 13, "count_100m": 94, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 108, "lat": -15.782364, "lon": 35.02397, "count_30m": 15, "count_100m": 51, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 109, "lat": -15.84435, "lon": 35.080359, "count_30m": 30, "count_100m": 237, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 110, "lat": -15.782484, "lon": 35.023723, "count_30m": 10, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 111, "lat": -15.782524, "lon": 35.023749, "count_30m": 9, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 112, "lat": -15.782475, "lon": 35.02372, "count_30m": 10, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 113, "lat": -15.732798, "lon": 35.016265, "count_30m": 9, "count_100m": 89, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 114, "lat": -15.75541, "lon": 35.002887, "count_30m": 6, "count_100m": 60, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 115, "lat": -15.78258, "lon": 35.023859, "count_30m": 10, "count_100m": 49, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 116, "lat": -15.782497, "lon": 35.023737, "count_30m": 9, "count_100m": 52, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 117, "lat": -15.758458, "lon": 35.033668, "count_30m": 17, "count_100m": 240, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 118, "lat": -15.73006, "lon": 35.033732, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 119, "lat": -15.733889, "lon": 35.015533, "count_30m": 16, "count_100m": 93, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 120, "lat": -15.845057, "lon": 35.080298, "count_30m": 22, "count_100m": 276, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 121, "lat": -15.729955, "lon": 35.035507, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 122, "lat": -15.769257, "lon": 35.02943, "count_30m": 29, "count_100m": 283, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 123, "lat": -15.764893, "lon": 35.030873, "count_30m": 38, "count_100m": 352, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 124, "lat": -15.769197, "lon": 35.030297, "count_30m": 20, "count_100m": 333, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 125, "lat": -15.760914, "lon": 35.033045, "count_30m": 31, "count_100m": 389, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 126, "lat": -15.728878, "lon": 35.037258, "count_30m": 4, "count_100m": 55, "tier_30m": 4, "tier_100m": 2, "tier_max": 2}, {"id": 127, "lat": -15.727093, "lon": 35.037214, "count_30m": 10, "count_100m": 77, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 128, "lat": -15.727733, "lon": 35.035633, "count_30m": 6, "count_100m": 68, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 129, "lat": -15.787552, "lon": 35.070059, "count_30m": 12, "count_100m": 141, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 130, "lat": -15.829909, "lon": 34.988414, "count_30m": 15, "count_100m": 103, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 131, "lat": -15.833437, "lon": 34.986028, "count_30m": 10, "count_100m": 71, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 132, "lat": -15.82814, "lon": 34.992563, "count_30m": 11, "count_100m": 128, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 133, "lat": -15.830752, "lon": 34.990432, "count_30m": 10, "count_100m": 127, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 134, "lat": -15.836529, "lon": 34.986647, "count_30m": 8, "count_100m": 62, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 135, "lat": -15.827349, "lon": 34.991083, "count_30m": 12, "count_100m": 130, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 136, "lat": -15.828107, "lon": 34.99261, "count_30m": 11, "count_100m": 126, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 137, "lat": -15.772934, "lon": 35.031045, "count_30m": 18, "count_100m": 354, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 138, "lat": -15.777097, "lon": 35.076353, "count_30m": 10, "count_100m": 167, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 139, "lat": -15.775338, "lon": 35.07461, "count_30m": 13, "count_100m": 171, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 140, "lat": -15.775224, "lon": 35.080441, "count_30m": 10, "count_100m": 141, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 141, "lat": -15.771337, "lon": 35.082205, "count_30m": 14, "count_100m": 121, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 142, "lat": -15.774198, "lon": 35.077358, "count_30m": 14, "count_100m": 148, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 143, "lat": -15.772435, "lon": 35.0757, "count_30m": 9, "count_100m": 118, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 144, "lat": -15.770384, "lon": 35.07901, "count_30m": 12, "count_100m": 164, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 145, "lat": -15.781143, "lon": 35.073861, "count_30m": 16, "count_100m": 153, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 146, "lat": -15.777442, "lon": 35.0742, "count_30m": 9, "count_100m": 95, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 147, "lat": -15.773303, "lon": 35.074269, "count_30m": 11, "count_100m": 134, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 148, "lat": -15.779633, "lon": 35.075892, "count_30m": 12, "count_100m": 145, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 149, "lat": -15.824143, "lon": 35.01232, "count_30m": 19, "count_100m": 144, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 150, "lat": -15.756917, "lon": 35.004307, "count_30m": 10, "count_100m": 130, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 151, "lat": -15.758953, "lon": 35.004435, "count_30m": 23, "count_100m": 290, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 152, "lat": -15.846854, "lon": 35.081017, "count_30m": 24, "count_100m": 284, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 153, "lat": -15.845713, "lon": 35.078654, "count_30m": 10, "count_100m": 220, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 154, "lat": -15.766095, "lon": 35.031381, "count_30m": 36, "count_100m": 413, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 155, "lat": -15.759525, "lon": 35.003285, "count_30m": 22, "count_100m": 307, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 156, "lat": -15.762097, "lon": 35.001832, "count_30m": 15, "count_100m": 193, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 157, "lat": -15.845782, "lon": 35.076615, "count_30m": 24, "count_100m": 240, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 158, "lat": -15.846067, "lon": 35.076511, "count_30m": 18, "count_100m": 209, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 159, "lat": -15.824404, "lon": 35.009144, "count_30m": 12, "count_100m": 148, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 160, "lat": -15.845687, "lon": 35.072895, "count_30m": 16, "count_100m": 208, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 161, "lat": -15.833667, "lon": 35.051259, "count_30m": 42, "count_100m": 308, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 162, "lat": -15.763355, "lon": 35.001723, "count_30m": 13, "count_100m": 201, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 163, "lat": -15.765958, "lon": 35.001417, "count_30m": 15, "count_100m": 227, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 164, "lat": -15.835688, "lon": 35.050865, "count_30m": 15, "count_100m": 160, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 165, "lat": -15.824558, "lon": 35.007075, "count_30m": 9, "count_100m": 161, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 166, "lat": -15.767502, "lon": 35.001913, "count_30m": 17, "count_100m": 252, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 167, "lat": -15.827553, "lon": 34.988126, "count_30m": 5, "count_100m": 63, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 168, "lat": -15.768767, "lon": 35.002402, "count_30m": 24, "count_100m": 277, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 169, "lat": -15.768963, "lon": 35.003102, "count_30m": 25, "count_100m": 281, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 170, "lat": -15.76619, "lon": 35.003107, "count_30m": 28, "count_100m": 332, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 171, "lat": -15.727353, "lon": 35.012212, "count_30m": 13, "count_100m": 53, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 172, "lat": -15.770702, "lon": 35.031982, "count_30m": 31, "count_100m": 348, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 173, "lat": -15.770073, "lon": 35.034914, "count_30m": 37, "count_100m": 344, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 174, "lat": -15.769412, "lon": 35.034564, "count_30m": 26, "count_100m": 372, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 175, "lat": -15.72709, "lon": 35.005867, "count_30m": 3, "count_100m": 6, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 176, "lat": -15.723295, "lon": 35.00415, "count_30m": 6, "count_100m": 42, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 177, "lat": -15.76152, "lon": 35.003463, "count_30m": 19, "count_100m": 207, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 178, "lat": -15.767735, "lon": 35.037107, "count_30m": 15, "count_100m": 258, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 179, "lat": -15.766265, "lon": 35.03583, "count_30m": 17, "count_100m": 272, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 180, "lat": -15.723287, "lon": 35.001092, "count_30m": 16, "count_100m": 53, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 181, "lat": -15.766683, "lon": 35.039393, "count_30m": 20, "count_100m": 358, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 182, "lat": -15.765813, "lon": 35.039727, "count_30m": 37, "count_100m": 335, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 183, "lat": -15.72061, "lon": 34.998515, "count_30m": 9, "count_100m": 25, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 184, "lat": -15.72371, "lon": 34.994357, "count_30m": 2, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 185, "lat": -15.731184, "lon": 35.001669, "count_30m": 15, "count_100m": 78, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 186, "lat": -15.75105, "lon": 35.00645, "count_30m": 13, "count_100m": 115, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 187, "lat": -15.735098, "lon": 35.00075, "count_30m": 14, "count_100m": 171, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 188, "lat": -15.749847, "lon": 35.008293, "count_30m": 9, "count_100m": 105, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 189, "lat": -15.749583, "lon": 35.01114, "count_30m": 16, "count_100m": 130, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 190, "lat": -15.795958, "lon": 35.083437, "count_30m": 38, "count_100m": 201, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 191, "lat": -15.793344, "lon": 35.083877, "count_30m": 8, "count_100m": 305, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 192, "lat": -15.76643, "lon": 35.037332, "count_30m": 23, "count_100m": 286, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 193, "lat": -15.792551, "lon": 35.08272, "count_30m": 36, "count_100m": 354, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 194, "lat": -15.794261, "lon": 35.082546, "count_30m": 34, "count_100m": 345, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 195, "lat": -15.834923, "lon": 35.02963, "count_30m": 25, "count_100m": 273, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 196, "lat": -15.790588, "lon": 35.083218, "count_30m": 28, "count_100m": 283, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 197, "lat": -15.789648, "lon": 35.083197, "count_30m": 27, "count_100m": 314, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 198, "lat": -15.764782, "lon": 35.035211, "count_30m": 19, "count_100m": 295, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 199, "lat": -15.788548, "lon": 35.083813, "count_30m": 26, "count_100m": 362, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 200, "lat": -15.835698, "lon": 35.030208, "count_30m": 24, "count_100m": 238, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}], "center_lat": -15.782925, "center_lon": 35.029884}, "Lilongwe": {"boreholes": [{"id": 1, "lat": -13.909312, "lon": 33.763439, "count_30m": 16, "count_100m": 99, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 2, "lat": -13.975272, "lon": 33.772548, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 3, "lat": -13.945899, "lon": 33.784096, "count_30m": 5, "count_100m": 6, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 4, "lat": -13.96074, "lon": 33.746952, "count_30m": 6, "count_100m": 38, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 5, "lat": -13.960481, "lon": 33.799476, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 6, "lat": -13.862159, "lon": 33.748913, "count_30m": 7, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 7, "lat": -13.908234, "lon": 33.785087, "count_30m": 6, "count_100m": 29, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 8, "lat": -13.958929, "lon": 33.77182, "count_30m": 8, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 9, "lat": -13.97683, "lon": 33.757655, "count_30m": 10, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 10, "lat": -13.976899, "lon": 33.757496, "count_30m": 9, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 11, "lat": -13.976977, "lon": 33.757529, "count_30m": 10, "count_100m": 35, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 12, "lat": -13.976907, "lon": 33.757505, "count_30m": 9, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 13, "lat": -13.977882, "lon": 33.747768, "count_30m": 12, "count_100m": 42, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 14, "lat": -14.025302, "lon": 33.805485, "count_30m": 19, "count_100m": 121, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 15, "lat": -13.960632, "lon": 33.74742, "count_30m": 10, "count_100m": 37, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 16, "lat": -13.960411, "lon": 33.74735, "count_30m": 11, "count_100m": 40, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 17, "lat": -13.999539, "lon": 33.812745, "count_30m": 12, "count_100m": 107, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 18, "lat": -14.00697, "lon": 33.667377, "count_30m": 4, "count_100m": 11, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 19, "lat": -13.976691, "lon": 33.757879, "count_30m": 10, "count_100m": 31, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 20, "lat": -14.002243, "lon": 33.801877, "count_30m": 18, "count_100m": 121, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 21, "lat": -13.928217, "lon": 33.768007, "count_30m": 27, "count_100m": 254, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 22, "lat": -14.00919, "lon": 33.820179, "count_30m": 15, "count_100m": 100, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 23, "lat": -14.017636, "lon": 33.679441, "count_30m": 5, "count_100m": 7, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 24, "lat": -13.924658, "lon": 33.761621, "count_30m": 12, "count_100m": 66, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 25, "lat": -14.013583, "lon": 33.777656, "count_30m": 14, "count_100m": 75, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 26, "lat": -13.888019, "lon": 33.732306, "count_30m": 11, "count_100m": 51, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 27, "lat": -13.78714, "lon": 33.816922, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 28, "lat": -13.99289, "lon": 33.778705, "count_30m": 15, "count_100m": 128, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 29, "lat": -13.922066, "lon": 33.769349, "count_30m": 36, "count_100m": 256, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 30, "lat": -13.956063, "lon": 33.774376, "count_30m": 8, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 31, "lat": -13.985999, "lon": 33.797403, "count_30m": 13, "count_100m": 72, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 32, "lat": -13.978262, "lon": 33.771228, "count_30m": 7, "count_100m": 18, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 33, "lat": -13.775525, "lon": 33.815532, "count_30m": 10, "count_100m": 66, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 34, "lat": -14.006667, "lon": 33.812894, "count_30m": 14, "count_100m": 123, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 35, "lat": -13.959488, "lon": 33.792808, "count_30m": 5, "count_100m": 16, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 36, "lat": -13.749461, "lon": 33.802557, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 37, "lat": -13.748298, "lon": 33.800148, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 38, "lat": -13.882412, "lon": 33.796005, "count_30m": 3, "count_100m": 8, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 39, "lat": -13.987653, "lon": 33.766662, "count_30m": 9, "count_100m": 43, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 40, "lat": -13.767642, "lon": 33.817035, "count_30m": 5, "count_100m": 25, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 41, "lat": -13.769858, "lon": 33.781987, "count_30m": 3, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 42, "lat": -13.766488, "lon": 33.818755, "count_30m": 6, "count_100m": 55, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 43, "lat": -13.768345, "lon": 33.817473, "count_30m": 3, "count_100m": 39, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 44, "lat": -13.77216, "lon": 33.819531, "count_30m": 12, "count_100m": 65, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 45, "lat": -13.749421, "lon": 33.802645, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 46, "lat": -13.758463, "lon": 33.798617, "count_30m": 21, "count_100m": 62, "tier_30m": 1, "tier_100m": 2, "tier_max": 1}, {"id": 47, "lat": -13.935489, "lon": 33.758518, "count_30m": 13, "count_100m": 62, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 48, "lat": -14.006889, "lon": 33.779008, "count_30m": 14, "count_100m": 64, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 49, "lat": -13.9851, "lon": 33.6307, "count_30m": 13, "count_100m": 93, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 50, "lat": -13.76434, "lon": 33.817192, "count_30m": 13, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 51, "lat": -13.776668, "lon": 33.828769, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 52, "lat": -13.810052, "lon": 33.785512, "count_30m": 9, "count_100m": 54, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 53, "lat": -13.896009, "lon": 33.755677, "count_30m": 14, "count_100m": 75, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 54, "lat": -14.025352, "lon": 33.661623, "count_30m": 8, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 55, "lat": -13.976827, "lon": 33.758316, "count_30m": 9, "count_100m": 28, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 56, "lat": -13.892632, "lon": 33.769657, "count_30m": 5, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 57, "lat": -13.929172, "lon": 33.760934, "count_30m": 12, "count_100m": 113, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 58, "lat": -13.92909, "lon": 33.760908, "count_30m": 12, "count_100m": 116, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 59, "lat": -14.018383, "lon": 33.694577, "count_30m": 12, "count_100m": 56, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 60, "lat": -13.960494, "lon": 33.799449, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 61, "lat": -13.997978, "lon": 33.814087, "count_30m": 12, "count_100m": 104, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 62, "lat": -14.020672, "lon": 33.657449, "count_30m": 4, "count_100m": 10, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 63, "lat": -13.755639, "lon": 33.808078, "count_30m": 3, "count_100m": 11, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 64, "lat": -13.9998, "lon": 33.6445, "count_30m": 4, "count_100m": 23, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 65, "lat": -13.980869, "lon": 33.76133, "count_30m": 13, "count_100m": 32, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 66, "lat": -14.041899, "lon": 33.678746, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 67, "lat": -13.999743, "lon": 33.644525, "count_30m": 4, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 68, "lat": -13.960417, "lon": 33.747409, "count_30m": 10, "count_100m": 38, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 69, "lat": -14.014647, "lon": 33.66042, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 70, "lat": -13.999743, "lon": 33.644525, "count_30m": 4, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 71, "lat": -14.013228, "lon": 33.788315, "count_30m": 7, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 72, "lat": -14.025352, "lon": 33.661623, "count_30m": 8, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 73, "lat": -14.025296, "lon": 33.661603, "count_30m": 7, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 74, "lat": -13.946063, "lon": 33.774376, "count_30m": 16, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 75, "lat": -14.041899, "lon": 33.678746, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 76, "lat": -13.899789, "lon": 33.777087, "count_30m": 15, "count_100m": 101, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 77, "lat": -13.996096, "lon": 33.642794, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 78, "lat": -14.011367, "lon": 33.693676, "count_30m": 12, "count_100m": 55, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 79, "lat": -14.016744, "lon": 33.684519, "count_30m": 13, "count_100m": 69, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 80, "lat": -14.008342, "lon": 33.690593, "count_30m": 27, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 81, "lat": -14.00895, "lon": 33.690877, "count_30m": 14, "count_100m": 109, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 82, "lat": -13.976261, "lon": 33.758152, "count_30m": 7, "count_100m": 26, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 83, "lat": -14.008342, "lon": 33.690593, "count_30m": 27, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 84, "lat": -14.039946, "lon": 33.675215, "count_30m": 4, "count_100m": 17, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 85, "lat": -14.019497, "lon": 33.688827, "count_30m": 24, "count_100m": 94, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 86, "lat": -13.792352, "lon": 33.822463, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 87, "lat": -13.926612, "lon": 33.75824, "count_30m": 10, "count_100m": 77, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 88, "lat": -14.00907, "lon": 33.688161, "count_30m": 16, "count_100m": 70, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 89, "lat": -13.994513, "lon": 33.640144, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 90, "lat": -14.009341, "lon": 33.658345, "count_30m": 10, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 91, "lat": -13.996808, "lon": 33.692289, "count_30m": 11, "count_100m": 55, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 92, "lat": -14.008328, "lon": 33.690547, "count_30m": 26, "count_100m": 110, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 93, "lat": -14.011958, "lon": 33.696172, "count_30m": 18, "count_100m": 78, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 94, "lat": -14.016234, "lon": 33.681176, "count_30m": 10, "count_100m": 41, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 95, "lat": -14.020315, "lon": 33.687941, "count_30m": 25, "count_100m": 68, "tier_30m": 1, "tier_100m": 2, "tier_max": 1}, {"id": 96, "lat": -14.01847, "lon": 33.692954, "count_30m": 14, "count_100m": 74, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 97, "lat": -13.97705, "lon": 33.756963, "count_30m": 5, "count_100m": 43, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 98, "lat": -13.9995, "lon": 33.645, "count_30m": 8, "count_100m": 35, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 99, "lat": -13.997817, "lon": 33.82784, "count_30m": 11, "count_100m": 77, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 100, "lat": -14.014338, "lon": 33.777742, "count_30m": 10, "count_100m": 85, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 101, "lat": -14.006989, "lon": 33.688662, "count_30m": 12, "count_100m": 29, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 102, "lat": -14.014647, "lon": 33.66042, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 103, "lat": -14.018383, "lon": 33.694577, "count_30m": 12, "count_100m": 56, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 104, "lat": -13.960203, "lon": 33.799396, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 105, "lat": -13.892696, "lon": 33.812693, "count_30m": 25, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 106, "lat": -14.022355, "lon": 33.689997, "count_30m": 10, "count_100m": 34, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 107, "lat": -14.009383, "lon": 33.692033, "count_30m": 28, "count_100m": 74, "tier_30m": 1, "tier_100m": 2, "tier_max": 1}, {"id": 108, "lat": -14.009281, "lon": 33.658325, "count_30m": 9, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 109, "lat": -14.031194, "lon": 33.682363, "count_30m": 12, "count_100m": 45, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 110, "lat": -14.01841, "lon": 33.694621, "count_30m": 12, "count_100m": 58, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 111, "lat": -14.002426, "lon": 33.642356, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 112, "lat": -14.017919, "lon": 33.691628, "count_30m": 21, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 113, "lat": -14.014636, "lon": 33.66048, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 114, "lat": -14.008342, "lon": 33.690593, "count_30m": 27, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 115, "lat": -13.912186, "lon": 33.791781, "count_30m": 10, "count_100m": 26, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 116, "lat": -14.018383, "lon": 33.694577, "count_30m": 12, "count_100m": 56, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 117, "lat": -14.009863, "lon": 33.690961, "count_30m": 12, "count_100m": 113, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 118, "lat": -14.00895, "lon": 33.690877, "count_30m": 14, "count_100m": 109, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 119, "lat": -14.041899, "lon": 33.678746, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 120, "lat": -14.009341, "lon": 33.658345, "count_30m": 10, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 121, "lat": -14.008342, "lon": 33.690593, "count_30m": 27, "count_100m": 108, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 122, "lat": -13.904685, "lon": 33.772353, "count_30m": 13, "count_100m": 81, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 123, "lat": -14.009341, "lon": 33.658345, "count_30m": 10, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 124, "lat": -13.999853, "lon": 33.811348, "count_30m": 15, "count_100m": 89, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 125, "lat": -13.999743, "lon": 33.644525, "count_30m": 4, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 126, "lat": -14.00895, "lon": 33.690877, "count_30m": 14, "count_100m": 109, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 127, "lat": -13.912186, "lon": 33.791781, "count_30m": 10, "count_100m": 26, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 128, "lat": -13.892718, "lon": 33.812689, "count_30m": 24, "count_100m": 109, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 129, "lat": -14.039344, "lon": 33.792032, "count_30m": 22, "count_100m": 114, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 130, "lat": -14.062878, "lon": 33.809645, "count_30m": 10, "count_100m": 71, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 131, "lat": -13.951833, "lon": 33.737108, "count_30m": 11, "count_100m": 80, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 132, "lat": -13.770478, "lon": 33.780637, "count_30m": 4, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 133, "lat": -13.76434, "lon": 33.817192, "count_30m": 13, "count_100m": 117, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 134, "lat": -14.00895, "lon": 33.690877, "count_30m": 14, "count_100m": 109, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 135, "lat": -13.980704, "lon": 33.761558, "count_30m": 11, "count_100m": 28, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 136, "lat": -14.014647, "lon": 33.66042, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 137, "lat": -13.985382, "lon": 33.754317, "count_30m": 7, "count_100m": 31, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 138, "lat": -14.040753, "lon": 33.680083, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 139, "lat": -14.018383, "lon": 33.694577, "count_30m": 12, "count_100m": 56, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 140, "lat": -13.983969, "lon": 33.792399, "count_30m": 12, "count_100m": 82, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 141, "lat": -14.041899, "lon": 33.678746, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 142, "lat": -13.960473, "lon": 33.799438, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 143, "lat": -13.893275, "lon": 33.775622, "count_30m": 5, "count_100m": 15, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 144, "lat": -14.014647, "lon": 33.66042, "count_30m": 3, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 145, "lat": -13.999743, "lon": 33.644525, "count_30m": 4, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 146, "lat": -13.960571, "lon": 33.747422, "count_30m": 10, "count_100m": 37, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 147, "lat": -13.960514, "lon": 33.799423, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 148, "lat": -13.947392, "lon": 33.763154, "count_30m": 14, "count_100m": 64, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 149, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 150, "lat": -13.92465, "lon": 33.761552, "count_30m": 13, "count_100m": 64, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 151, "lat": -13.997852, "lon": 33.814435, "count_30m": 13, "count_100m": 109, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 152, "lat": -14.007067, "lon": 33.751792, "count_30m": 4, "count_100m": 4, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 153, "lat": -14.009341, "lon": 33.658345, "count_30m": 10, "count_100m": 33, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 154, "lat": -13.960473, "lon": 33.799438, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 155, "lat": -13.960197, "lon": 33.799455, "count_30m": 5, "count_100m": 8, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 156, "lat": -14.025352, "lon": 33.661623, "count_30m": 8, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 157, "lat": -14.009326, "lon": 33.65837, "count_30m": 10, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 158, "lat": -14.00427, "lon": 33.822157, "count_30m": 10, "count_100m": 92, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 159, "lat": -14.025352, "lon": 33.661623, "count_30m": 8, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 160, "lat": -13.997083, "lon": 33.696381, "count_30m": 4, "count_100m": 5, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 161, "lat": -13.886486, "lon": 33.77418, "count_30m": 9, "count_100m": 37, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 162, "lat": -13.894672, "lon": 33.78372, "count_30m": 6, "count_100m": 27, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 163, "lat": -14.002828, "lon": 33.689252, "count_30m": 8, "count_100m": 36, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 164, "lat": -13.960413, "lon": 33.747358, "count_30m": 10, "count_100m": 40, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 165, "lat": -13.810492, "lon": 33.788983, "count_30m": 3, "count_100m": 24, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 166, "lat": -13.999428, "lon": 33.771548, "count_30m": 4, "count_100m": 27, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 167, "lat": -14.009751, "lon": 33.819482, "count_30m": 13, "count_100m": 91, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 168, "lat": -13.999643, "lon": 33.75919, "count_30m": 13, "count_100m": 29, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 169, "lat": -13.978766, "lon": 33.799733, "count_30m": 8, "count_100m": 87, "tier_30m": 3, "tier_100m": 1, "tier_max": 1}, {"id": 170, "lat": -13.983058, "lon": 33.797733, "count_30m": 14, "count_100m": 83, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 171, "lat": -14.003558, "lon": 33.798908, "count_30m": 15, "count_100m": 137, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 172, "lat": -13.975156, "lon": 33.720633, "count_30m": 10, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 173, "lat": -13.915173, "lon": 33.757655, "count_30m": 16, "count_100m": 138, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 174, "lat": -13.946063, "lon": 33.774376, "count_30m": 16, "count_100m": 52, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 175, "lat": -13.975383, "lon": 33.758926, "count_30m": 8, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 176, "lat": -13.816414, "lon": 33.797324, "count_30m": 5, "count_100m": 14, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 177, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 178, "lat": -13.819122, "lon": 33.797688, "count_30m": 14, "count_100m": 63, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 179, "lat": -13.972523, "lon": 33.773351, "count_30m": 5, "count_100m": 15, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 180, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 181, "lat": -13.984371, "lon": 33.762317, "count_30m": 6, "count_100m": 42, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 182, "lat": -13.899428, "lon": 33.816175, "count_30m": 39, "count_100m": 160, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 183, "lat": -13.996428, "lon": 33.788711, "count_30m": 8, "count_100m": 67, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 184, "lat": -13.961028, "lon": 33.799141, "count_30m": 5, "count_100m": 12, "tier_30m": 3, "tier_100m": 4, "tier_max": 3}, {"id": 185, "lat": -13.922178, "lon": 33.830985, "count_30m": 7, "count_100m": 24, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 186, "lat": -13.980313, "lon": 33.761455, "count_30m": 5, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 187, "lat": -13.960523, "lon": 33.747472, "count_30m": 9, "count_100m": 38, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 188, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 189, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 190, "lat": -14.013702, "lon": 33.811802, "count_30m": 13, "count_100m": 98, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 191, "lat": -13.985986, "lon": 33.794804, "count_30m": 11, "count_100m": 99, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 192, "lat": -13.994441, "lon": 33.790329, "count_30m": 9, "count_100m": 69, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 193, "lat": -13.893971, "lon": 33.778023, "count_30m": 4, "count_100m": 23, "tier_30m": 4, "tier_100m": 3, "tier_max": 3}, {"id": 194, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 195, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 196, "lat": -13.972546, "lon": 33.756208, "count_30m": 10, "count_100m": 26, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 197, "lat": -14.041849, "lon": 33.67874, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 198, "lat": -13.999121, "lon": 33.638404, "count_30m": 3, "count_100m": 3, "tier_30m": 4, "tier_100m": 5, "tier_max": 4}, {"id": 199, "lat": -13.98799, "lon": 33.803986, "count_30m": 10, "count_100m": 74, "tier_30m": 3, "tier_100m": 2, "tier_max": 2}, {"id": 200, "lat": -13.98459, "lon": 33.799668, "count_30m": 14, "count_100m": 70, "tier_30m": 2, "tier_100m": 2, "tier_max": 2}, {"id": 201, "lat": -14.023281, "lon": 33.807005, "count_30m": 19, "count_100m": 177, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 202, "lat": -13.993865, "lon": 33.794848, "count_30m": 14, "count_100m": 96, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 203, "lat": -13.99303, "lon": 33.78512, "count_30m": 16, "count_100m": 126, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 204, "lat": -13.96672, "lon": 33.761158, "count_30m": 7, "count_100m": 22, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 205, "lat": -13.97413, "lon": 33.749387, "count_30m": 4, "count_100m": 18, "tier_30m": 4, "tier_100m": 4, "tier_max": 4}, {"id": 206, "lat": -13.980994, "lon": 33.761104, "count_30m": 13, "count_100m": 33, "tier_30m": 2, "tier_100m": 3, "tier_max": 2}, {"id": 207, "lat": -13.998047, "lon": 33.780878, "count_30m": 5, "count_100m": 32, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}, {"id": 208, "lat": -14.022526, "lon": 33.807358, "count_30m": 22, "count_100m": 155, "tier_30m": 1, "tier_100m": 1, "tier_max": 1}, {"id": 209, "lat": -13.988936, "lon": 33.810338, "count_30m": 18, "count_100m": 124, "tier_30m": 2, "tier_100m": 1, "tier_max": 1}, {"id": 210, "lat": -13.990216, "lon": 33.766143, "count_30m": 8, "count_100m": 21, "tier_30m": 3, "tier_100m": 3, "tier_max": 3}], "center_lat": -13.961821, "center_lon": 33.746931}};
-
-// ═══════════════════════════════════════════════════════
-// 100 m RING COLOUR — keyed by tier_100m
-// ═══════════════════════════════════════════════════════
-const RING_COLOR = {
-  1: "#d7191c",
-  2: "#fdae61",
-  3: "#c8c800",
-  4: "#a6d96a",
-  5: "#1a9641",
-};
+function tierTextColor(t) {
+  return (t === 3 || t === 4 || t === 5) ? "#333" : "#fff";
+}
 
 let map = null;
-let legendOpen = false;
+let legendOpen = true;
 
-// Build city buttons
+// ============================================================
+// BUILD CITY BUTTONS
+// ============================================================
 const grid = document.getElementById("city-buttons");
 Object.entries(CITY_DATA).forEach(([city, data]) => {
   const btn = document.createElement("button");
@@ -318,17 +509,34 @@ Object.entries(CITY_DATA).forEach(([city, data]) => {
   grid.appendChild(btn);
 });
 
+// ============================================================
+// LEGEND TOGGLE
+// ============================================================
 function toggleLegend() {
   legendOpen = !legendOpen;
-  document.getElementById("legend-panel").classList.toggle("open", legendOpen);
+  const body = document.getElementById("legend-body");
+  const tab  = document.getElementById("legend-toggle");
+  if (legendOpen) {
+    body.classList.remove("collapsed");
+    tab.textContent = "LEGEND";
+  } else {
+    body.classList.add("collapsed");
+    tab.textContent = "LEGEND";
+  }
 }
 
+// ============================================================
+// LOAD MAP
+// ============================================================
 function loadMap(cityName) {
-  document.getElementById("landing").style.display = "none";
-  document.getElementById("mappage").style.display = "flex";
+  document.getElementById("landing").style.display   = "none";
+  document.getElementById("mappage").style.display   = "flex";
   document.getElementById("legend-panel").style.display = "flex";
-  document.getElementById("legend-toggle").style.display = "flex";
-  document.getElementById("city-badge").textContent = cityName;
+  document.getElementById("city-badge").textContent  = cityName;
+
+  // Reset legend to open
+  legendOpen = true;
+  document.getElementById("legend-body").classList.remove("collapsed");
 
   if (map) { map.remove(); map = null; }
 
@@ -351,94 +559,111 @@ function loadMap(cityName) {
   ).addTo(map);
 
   data.boreholes.forEach(b => {
-    const t30  = TIER[b.tier_30m]  || { color:"gray", label:"Unknown" };
-    const t100 = TIER[b.tier_100m] || { color:"gray", label:"Unknown" };
-    const ringColor = RING_COLOR[b.tier_100m] || "#888";
-    const dualP1 = b.tier_30m === 1 && b.tier_100m === 1;
+    const t30  = TIER[b.tier_30m]  || { color: "gray", label: "Unknown" };
+    const t100 = TIER[b.tier_100m] || { color: "gray", label: "Unknown" };
+    const tMax = TIER[b.tier_max]  || { color: "gray", label: "Unknown" };
+    const dualCritical = (b.tier_30m === 1 && b.tier_100m === 1);
 
-    // Text contrast for dot
-    const dotText = [3,4,5].includes(b.tier_30m) ? "#333" : "#fff";
-
-    // ── POPUP: separate columns for each zone ──
+    // Popup: shows both zones independently
     const popup = `
-      <div style="font-family:Arial;min-width:240px;font-size:13px;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.18);">
-        <div style="background:#0d1f2d;color:white;padding:8px 12px;font-weight:700;font-size:13px;">
-          Borehole #${b.id}${dualP1 ? ' &nbsp;DUAL P1 ALERT' : ''}
+      <div style="font-family:Arial;min-width:220px;font-size:13px;">
+        <div style="background:#0d1f2d;color:white;padding:8px 12px;
+                    border-radius:6px 6px 0 0;font-weight:bold;font-size:12px;">
+          Borehole #${b.id}${dualCritical ? ' <span style="color:#FFD700;">&#9733; Dual Critical</span>' : ''}
         </div>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;">
-          <thead>
-            <tr>
-              <th style="padding:6px 10px;background:#f0f4f8;text-align:left;font-weight:600;color:#444;border-bottom:1px solid #dde2ea;width:40%;">Zone</th>
-              <th style="padding:6px 10px;background:${t30.color};color:${dotText};text-align:center;font-weight:700;border-bottom:1px solid #dde2ea;">30 m Inner</th>
-              <th style="padding:6px 10px;background:${t100.color};color:${[3,4,5].includes(b.tier_100m)?'#333':'#fff'};text-align:center;font-weight:700;border-bottom:1px solid #dde2ea;">100 m Outer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background:#fff;">
-              <td style="padding:5px 10px;color:#666;border-bottom:1px solid #f0f0f0;">Buildings</td>
-              <td style="padding:5px 10px;text-align:center;font-weight:700;border-bottom:1px solid #f0f0f0;">${b.count_30m}</td>
-              <td style="padding:5px 10px;text-align:center;font-weight:700;border-bottom:1px solid #f0f0f0;">${b.count_100m}</td>
-            </tr>
-            <tr style="background:#f9f9f9;">
-              <td style="padding:5px 10px;color:#666;border-bottom:1px solid #f0f0f0;">Risk tier</td>
-              <td style="padding:5px 10px;text-align:center;font-weight:700;color:${t30.color};border-bottom:1px solid #f0f0f0;">${t30.label}</td>
-              <td style="padding:5px 10px;text-align:center;font-weight:700;color:${t100.color};border-bottom:1px solid #f0f0f0;">${t100.label}</td>
-            </tr>
-            <tr style="background:#fff;">
-              <td style="padding:5px 10px;color:#666;border-bottom:1px solid #f0f0f0;">Mechanism</td>
-              <td style="padding:5px 10px;text-align:center;font-size:11px;color:#555;border-bottom:1px solid #f0f0f0;">Immediate hazard</td>
-              <td style="padding:5px 10px;text-align:center;font-size:11px;color:#555;border-bottom:1px solid #f0f0f0;">Cumulative loading</td>
-            </tr>
-            <tr style="background:#f9f9f9;">
-              <td style="padding:5px 10px;color:#666;">Assessment</td>
-              <td style="padding:5px 10px;text-align:center;font-size:11px;color:#444;">${DESC_30[b.tier_30m]||''}</td>
-              <td style="padding:5px 10px;text-align:center;font-size:11px;color:#444;">${DESC_100[b.tier_100m]||''}</td>
-            </tr>
-          </tbody>
-        </table>
-        ${dualP1 ? `<div style="background:#fff3cd;color:#664d03;padding:7px 12px;font-size:11.5px;font-weight:600;border-top:1px solid #ffc107;">⚠️ Both zones rated P1 Critical — immediate field verification required</div>` : ''}
+
+        <div style="padding:10px 12px;border:1px solid #eee;border-top:none;border-radius:0 0 6px 6px;">
+
+          <div style="background:#fef2f2;border-left:3px solid #d7191c;
+                      padding:6px 8px;border-radius:0 4px 4px 0;margin-bottom:8px;">
+            <div style="font-size:10px;font-weight:700;color:#d7191c;
+                        text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">
+              30 m Inner Zone (Immediate Hazard)
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:14px;height:14px;border-radius:50%;
+                          background:${t30.color};border:1px solid rgba(0,0,0,0.15);"></div>
+              <strong>${t30.label}</strong>
+            </div>
+            <div style="font-size:11px;color:#666;margin-top:3px;">
+              Buildings within 30 m: <strong>${b.count_30m}</strong>
+            </div>
+          </div>
+
+          <div style="background:#fff7ed;border-left:3px solid #fdae61;
+                      padding:6px 8px;border-radius:0 4px 4px 0;margin-bottom:8px;">
+            <div style="font-size:10px;font-weight:700;color:#b45309;
+                        text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">
+              100 m Outer Zone (Cumulative Loading)
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:14px;height:14px;border-radius:50%;
+                          background:${t100.color};border:1px solid rgba(0,0,0,0.15);"></div>
+              <strong>${t100.label}</strong>
+            </div>
+            <div style="font-size:11px;color:#666;margin-top:3px;">
+              Buildings within 100 m: <strong>${b.count_100m}</strong>
+            </div>
+          </div>
+
+          ${dualCritical ? `
+          <div style="background:#fefce8;border:1px solid #FFD700;border-radius:4px;
+                      padding:5px 8px;font-size:11px;color:#78350f;font-weight:600;">
+            Both zones are Critical. Field investigation recommended immediately.
+          </div>` : ''}
+
+        </div>
       </div>`;
 
-    // ── MARKERS ──
-
-    // 30 m buffer circle (coloured by 30m tier — immediate hazard)
-    L.circle([b.lat, b.lon], {
-      radius:30, color: t30.color, weight:1.5,
-      fillColor: t30.color, fillOpacity:0.12
-    }).addTo(map);
-
-    // 100 m buffer circle (coloured by 100m tier — cumulative loading)
-    L.circle([b.lat, b.lon], {
-      radius:100, color: ringColor, weight:1.5,
-      fillColor: ringColor, fillOpacity:0.04
-    }).addTo(map);
-
-    // Yellow alert ring for dual-P1 wells (drawn on top of 100m buffer)
-    if (dualP1) {
-      L.circle([b.lat, b.lon], {
-        radius:100, color:"#FFD700", weight:3,
-        fillOpacity:0, dashArray:"6,4"
-      }).bindTooltip("Dual P1 Alert — both zones Critical").addTo(map);
-    }
-
-    // Main dot marker (fill = 30m tier)
+    // Dot colour = 30m zone tier (inner/immediate hazard drives the marker)
     L.circleMarker([b.lat, b.lon], {
-      radius:10, color:"#333", weight:1.5,
-      fillColor: t30.color, fillOpacity:0.95
-    })
-    .bindPopup(popup, { maxWidth:320 })
-    .bindTooltip(`#${b.id} | 30m: ${t30.label} | 100m: ${t100.label}${dualP1?'':''}`)
-    .addTo(map);
+      radius: 11,
+      color: "#333",
+      weight: 1.5,
+      fillColor: t30.color,
+      fillOpacity: 0.9
+    }).bindPopup(popup, { maxWidth: 270 })
+      .bindTooltip(`#${b.id} | 30m: ${t30.label} | 100m: ${t100.label}`)
+      .addTo(map);
+
+    // 30 m buffer ring - coloured by 30m tier
+    L.circle([b.lat, b.lon], {
+      radius: 30,
+      color: t30.color,
+      weight: 2,
+      fillColor: t30.color,
+      fillOpacity: 0.06
+    }).bindTooltip(`30 m zone: ${t30.label}`).addTo(map);
+
+    // 100 m buffer ring - coloured by 100m tier
+    L.circle([b.lat, b.lon], {
+      radius: 100,
+      color: t100.color,
+      weight: 1.5,
+      fillColor: t100.color,
+      fillOpacity: 0.04
+    }).bindTooltip(`100 m zone: ${t100.label}`).addTo(map);
+
+    // Yellow highlight ring at 100 m when BOTH zones are P1
+    if (dualCritical) {
+      L.circle([b.lat, b.lon], {
+        radius: 100,
+        color: "#FFD700",
+        weight: 3.5,
+        fill: false,
+        dashArray: null
+      }).bindTooltip("Dual Critical: both 30 m and 100 m zones are P1").addTo(map);
+    }
   });
 }
 
+// ============================================================
+// BACK TO LANDING
+// ============================================================
 function showLanding() {
-  document.getElementById("mappage").style.display = "none";
+  document.getElementById("mappage").style.display   = "none";
   document.getElementById("legend-panel").style.display = "none";
-  document.getElementById("legend-toggle").style.display = "none";
-  document.getElementById("legend-panel").classList.remove("open");
-  document.getElementById("landing").style.display = "flex";
-  legendOpen = false;
+  document.getElementById("landing").style.display   = "flex";
   if (map) { map.remove(); map = null; }
 }
 </script>
