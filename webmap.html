@@ -78,7 +78,7 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
   z-index:1100; background:#0d1f2d; color:white; border:none;
   border-radius:7px 0 0 7px; width:30px; padding:18px 0;
   cursor:pointer; display:none; align-items:center; justify-content:center;
-  box-shadow:-2px 0 10px rgba(0,0,0,0.3); transition:background 0.15s;
+  box-shadow:0 px 0 10px rgba(0,0,0,0.3); transition:background 0.15s;
   writing-mode:vertical-rl; text-orientation:mixed;
   font-size:10px; font-weight:700; letter-spacing:1.5px;
 }
@@ -88,7 +88,7 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
 #legend-panel {
   position:fixed; top:0; right:-340px; width:320px; height:100vh;
   z-index:1050; background:white; border-left:1px solid #dde2ea;
-  box-shadow:-4px 0 24px rgba(0,0,0,0.18);
+  box-shadow:0 px 0 24px rgba(0,0,0,0.18);
   transition:right 0.28s cubic-bezier(0.4,0,0.2,1);
   display:none; flex-direction:column; overflow:hidden;
 }
@@ -121,7 +121,7 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
 .leg-sub { font-size:11px; color:#888; margin-top:2px; }
 
 .leg-zone-box {
-  background:#f0f4f8; border:1px solid #d8e0e8; border-radius:7px;
+  background:#ffffff; border:1px solid #ffffff; border-radius:7px;
   padding:10px 13px; margin-bottom:4px;
 }
 .leg-zone-box h4 { font-size:12px; font-weight:700; color:#0d1f2d; margin-bottom:4px; }
@@ -131,7 +131,7 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
 .leg-note { font-size:11px; color:#aaa; text-align:center; margin-top:12px; }
 
 .dual-tip {
-  background:#fff8e1; border:1px solid #f9c642; border-radius:7px;
+  background:#ffffff; border:1px solid #ffffff; border-radius:7px;
   padding:9px 11px; font-size:12px; color:#5d4000; margin-bottom:12px;
   display:flex; gap:8px; align-items:flex-start; line-height:1.5;
 }
@@ -170,10 +170,10 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
     </div>
     <div class="topbar-center">
       <div class="main-title">Borehole Contamination Risk Assessment</div>
-      <div class="sub-title">MapAID × Mzuzu University — WASH Risk Triage Programme, Malawi</div>
+      <div class="sub-title">WASH Risk Triage Programme, Malawi</div>
     </div>
     <div id="city-badge"></div>
-    <button id="back-btn" onclick="showLanding()">← Cities</button>
+    <button id="back-btn" onclick="showLanding()"> Cities</button>
   </div>
   <div id="map"></div>
 </div>
@@ -191,14 +191,12 @@ h1 { font-size:34px; font-weight:800; text-align:center; color:#0d1f2d; line-hei
 
     <div class="dual-tip">
       <span class="dual-tip-icon"> </span>
-      <span>The 30 m and 100 m zones represent <strong>two independent contamination mechanisms</strong> and are rated separately. Dot fill = 30 m tier. Outer ring colour = 100 m tier.</span>
+      <span>The 30 m and 100 m zones represent two independent contamination mechanisms. Dot fill = 30 m tier. Outer ring colour = 100 m tier.</span>
     </div>
 
     <!-- 30 m ZONE -->
     <div class="leg-zone-box">
-      <h4>● Inner Zone — 30 m Setback (~0.28 ha) | Immediate Hazard</h4>
-      <p>Evaluates wellhead breakthrough risk and 30-day pathogen die-off failure. Dot fill colour reflects this rating.</p>
-    </div>
+      <h4>Inner Zone - 30 m Setback | Immediate Hazard</h4>
     <div class="leg-section-title">30 m Tier (dot fill colour)</div>
     <div class="leg-row">
       <div class="leg-dot" style="background:#d7191c;"></div>
