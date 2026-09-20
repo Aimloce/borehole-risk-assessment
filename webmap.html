@@ -560,13 +560,13 @@ function loadMap(cityName) {
   document.getElementById("landing").style.display = "none";
   document.getElementById("mappage").style.display = "flex";
   document.getElementById("legend-toggle").style.display = "block";
-  const hasSurveyed = data.surveyed && data.surveyed.length > 0;
-  document.getElementById("surveyed-toggle").style.display = hasSurveyed ? "block" : "none";
   document.getElementById("city-badge").textContent = cityName;
 
   if (map) { map.remove(); map = null; }
 
   const data = CITY_DATA[cityName];
+  const hasSurveyed = data.surveyed && data.surveyed.length > 0;
+  document.getElementById("surveyed-toggle").style.display = hasSurveyed ? "block" : "none";
   map = L.map("map").setView([data.center_lat, data.center_lon], 15);
 
   const satellite = L.tileLayer(
