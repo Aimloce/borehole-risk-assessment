@@ -288,7 +288,33 @@ h1 {
 #legend-toggle:hover {
     background: #f5f7f9;
 }
+#legend-toggle:hover {
+    background: #f5f7f9;
+}
 
+#surveyed-toggle {
+    position: fixed;
+    top: calc(50% + 120px);
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2001;
+    width: 38px;
+    height: 84px;
+    border: 1px solid #dfe4ea;
+    border-right: none;
+    border-radius: 9px 0 0 9px;
+    background: white;
+    color: #2e6da4;
+    box-shadow: -2px 2px 12px rgba(0,0,0,0.16);
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.3px;
+}
+#surveyed-toggle:hover { background: #f0f5fb; }
+    
 .leg-close {
     position: absolute;
     top: 14px;
@@ -473,6 +499,7 @@ h1 {
 
 <!-- LEGEND -->
 <button id="legend-toggle" style="display:none;" onclick="toggleLegend()" aria-label="Open map legend">Legend</button>
+<button id="surveyed-toggle" style="display:none;" onclick="zoomToSurveyed()">Zoom to Surveyed</button>
 
 <div id="legend">
   <button class="leg-close" onclick="toggleLegend(false)" aria-label="Close legend">&times;</button>
@@ -533,6 +560,8 @@ function loadMap(cityName) {
   document.getElementById("landing").style.display = "none";
   document.getElementById("mappage").style.display = "flex";
   document.getElementById("legend-toggle").style.display = "block";
+  const hasSurveyed = data.surveyed && data.surveyed.length > 0;
+  document.getElementById("surveyed-toggle").style.display = hasSurveyed ? "block" : "none";
   document.getElementById("city-badge").textContent = cityName;
 
   if (map) { map.remove(); map = null; }
@@ -748,14 +777,14 @@ function loadMap(cityName) {
       L.circle([b.lat, b.lon], {
         radius:100, pane:'risk100Pane',
         color:t100.color, weight:3, opacity:0.95,
-        fillColor:t100.color, fillOpacity:0.22, interactive:false
+        fillColor:t100.color, fillOpacity:0.45, interactive:false
       }).bindTooltip(`100m Zone: ${rating100}`).addTo(map);
 
       // 30m zone fill
       L.circle([b.lat, b.lon], {
         radius:30, pane:'risk30Pane',
         color:t30.color, weight:3, opacity:1,
-        fillColor:t30.color, fillOpacity:0.36, interactive:false
+        fillColor:t30.color, fillOpacity:0.60, interactive:false
       }).bindTooltip(`30m Zone: ${rating30}`).addTo(map);
 
       // Yellow urgent ring
@@ -796,7 +825,21 @@ function loadMap(cityName) {
   // Start with the legend closed so it behaves as a right-edge sliding panel.
   document.getElementById("legend").classList.remove("open");
 }
-
+function zoomToSurveyed() {
+  const cityName = document.getElementById("city-badge").textContent;
+  const data = CITY_DATA[cityName];
+  if (!data || !data.surveyed || data.surveyed.length === 0) {
+    alert("No surveyed sites for " + cityName);
+    return;
+  }
+  const lats = data.surveyed.map(b => b.lat);
+  const lons = data.surveyed.map(b => b.lon);
+  const bounds = L.latLngBounds(
+    [Math.min(...lats) - 0.001, Math.min(...lons) - 0.001],
+    [Math.max(...lats) + 0.001, Math.max(...lons) + 0.001]
+  );
+  map.fitBounds(bounds, { padding: [40, 40] });
+}
 function toggleLegend(force) {
   const legend = document.getElementById("legend");
   const shouldOpen = typeof force === "boolean"
@@ -808,6 +851,7 @@ function toggleLegend(force) {
 function showLanding() {
   document.getElementById("mappage").style.display = "none";
   document.getElementById("legend").classList.remove("open");
+  document.getElementById("surveyed-toggle").style.display = "none";
   document.getElementById("legend-toggle").style.display = "none";
   document.getElementById("landing").style.display = "flex";
   if (map) { map.remove(); map = null; }
