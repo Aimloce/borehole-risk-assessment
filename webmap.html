@@ -652,7 +652,7 @@ function loadMap(cityName) {
       const factorRows = factors.map(f => {
         const pips = Array.from({length:5}, (_,i) =>
           `<span style="display:inline-block;width:9px;height:9px;border-radius:50%;
-                        margin-right:2px;background:${i < (f.val||0) ? mcdaPipColor : '#ddd'};"></span>`
+                        margin-right:2px;background:${i < (f.val||0) ? mcdaColor : '#ddd'};"></span>`
         ).join("");
         return `<div style="display:flex;justify-content:space-between;align-items:center;
                             margin:3px 0;font-size:11px;">
@@ -808,7 +808,7 @@ function loadMap(cityName) {
       let mcdaSection = "";
     if (b.mcda_class != null) {
         const mcdaColor     = MCDA_COLORS[b.mcda_class] || "gray";
-        const mcdaPipColor   = b.mcda_class === 3 ? "#8a7600" : mcdaColor;
+        const mcdaPipColor   = b.mcda_class === 3 ? "#8a7600" : mcdaPipColor;
         const mcdaTextColor =  b.mcda_class === 3 ? "#8a7600" : [1,2].includes(b.mcda_class) ? "#000" : "#fff";
         const mcdaLabel     = MCDA_LABELS[b.mcda_class] || "";
 
