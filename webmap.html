@@ -531,7 +531,7 @@ h1 {
   <hr class="leg-hr">
   <div class="leg-zone">
     <div class="leg-zone-title">Physical Risk (MCDA)</div>
-    <div class="leg-zone-desc">Mzuzu only. Weighted score from topographic wetness, slope, distance to river, drainage density and flow accumulation.</div>
+    <div class="leg-zone-desc">Weighted score from 30m, and 100m Building Density Rates, Topographic Wetness Index, Slope, Distance to River, Drainage Density, and Flow Accumulation.</div>
   </div>
   <div class="leg-section-title">MCDA Class</div>
   <div class="leg-row"><div class="leg-dot" style="background:#d7191c;"></div><strong>5</strong>&nbsp; Very High</div>
@@ -642,7 +642,7 @@ function loadMap(cityName) {
       const mcdaLabel     = MCDA_LABELS[b.mcda_class] || "";
 
       const factors = [
-        { label: "Topographic Wetness", val: b.twi_score      },
+        { label: "Topographic Wetness Index", val: b.twi_score      },
         { label: "Slope",               val: b.slope_score     },
         { label: "Distance to River",   val: b.dist_riv_score  },
         { label: "Drainage Density",    val: b.drain_score     },
@@ -652,7 +652,7 @@ function loadMap(cityName) {
       const factorRows = factors.map(f => {
         const pips = Array.from({length:5}, (_,i) =>
           `<span style="display:inline-block;width:9px;height:9px;border-radius:50%;
-                        margin-right:2px;background:${i < (f.val||0) ? mcdaColor : '#ddd'};"></span>`
+                        margin-right:2px;background:${i < (f.val||0) ? mcdaPipColor : '#ddd'};"></span>`
         ).join("");
         return `<div style="display:flex;justify-content:space-between;align-items:center;
                             margin:3px 0;font-size:11px;">
@@ -671,7 +671,7 @@ function loadMap(cityName) {
           <div style="margin-top:8px;padding:6px 10px;background:${mcdaColor};
                       color:${mcdaTextColor};border-radius:4px;font-weight:bold;
                       font-size:12px;display:flex;justify-content:space-between;">
-            <span>Class ${b.mcda_class} &mdash; ${mcdaLabel}</span>
+            <span>Class ${b.mcda_class}: ${mcdaLabel}</span>
             <span style="opacity:0.85;font-weight:normal;">score ${b.mcda_score}</span>
           </div>
         </div>`;
@@ -808,7 +808,8 @@ function loadMap(cityName) {
       let mcdaSection = "";
     if (b.mcda_class != null) {
         const mcdaColor     = MCDA_COLORS[b.mcda_class] || "gray";
-        const mcdaTextColor = [1,2].includes(b.mcda_class) ? "#000" : "#fff";
+        const mcdaPipColor   = b.mcda_class === 3 ? "#8a7600" : mcdaColor;
+        const mcdaTextColor =  b.mcda_class === 3 ? "#8a7600" : [1,2].includes(b.mcda_class) ? "#000" : "#fff";
         const mcdaLabel     = MCDA_LABELS[b.mcda_class] || "";
 
         const factors = [
@@ -822,7 +823,7 @@ function loadMap(cityName) {
         const factorRows = factors.map(f => {
         const pips = Array.from({length:5}, (_,i) =>
           `<span style="display:inline-block;width:9px;height:9px;border-radius:50%;
-                        margin-right:2px;background:${i < (f.val||0) ? mcdaColor : '#ddd'};"></span>`
+                        margin-right:2px;background:${i < (f.val||0) ? mcdaPipColor : '#ddd'};"></span>`
         ).join("");
         return `<div style="display:flex;justify-content:space-between;align-items:center;
                             margin:3px 0;font-size:11px;">
