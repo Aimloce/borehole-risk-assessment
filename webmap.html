@@ -808,12 +808,12 @@ function loadMap(cityName) {
       let mcdaSection = "";
     if (b.mcda_class != null) {
         const mcdaColor     = MCDA_COLORS[b.mcda_class] || "gray";
-        const mcdaPipColor   = b.mcda_class === 3 ? "#8a7600" : mcdaPipColor;
+        const mcdaPipColor   = b.mcda_class === 3 ? "#8a7600" : mcdaColor;
         const mcdaTextColor =  b.mcda_class === 3 ? "#8a7600" : [1,2].includes(b.mcda_class) ? "#000" : "#fff";
         const mcdaLabel     = MCDA_LABELS[b.mcda_class] || "";
 
         const factors = [
-        { label: "Topographic Wetness", val: b.twi_score      },
+        { label: "Topographic Wetness Index", val: b.twi_score      },
         { label: "Slope",               val: b.slope_score     },
         { label: "Distance to River",   val: b.dist_riv_score  },
         { label: "Drainage Density",    val: b.drain_score     },
